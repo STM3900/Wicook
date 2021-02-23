@@ -8,8 +8,14 @@
 <script>
 import ListeIngredients from "../components/Liste-Ingredients";
 export default {
-  components: { ListeIngredients }
+  components: { ListeIngredients },
+  data() {
+    return {
+      items: [{ message: "Salut" }, { message: "Les amis" }]
+    };
+  }
 };
+
 </script>
 
 <style></style>
