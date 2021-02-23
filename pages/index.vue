@@ -1,9 +1,15 @@
 <template>
-  <h1>plop</h1>
+  <div>
+    <h1>plop</h1>
+    <ListeIngredients />
+  </div>
 </template>
 
 <script>
-export default {};
+import ListeIngredients from "../components/Liste-Ingredients";
+export default {
+  components: { ListeIngredients }
+};
 </script>
 
 <style></style>
