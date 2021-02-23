@@ -1,7 +1,7 @@
 <template>
   <ul>
-    <li v-for="item in items" :key="item.message">
-      {{ item.message }}
+    <li v-for="i in ingredients" :key="i.nom">
+      {{ i.nom }}
     </li>
   </ul>
 </template>
@@ -9,10 +9,8 @@
 <script>
 export default {
   name: "ListeIngredients",
-  data() {
-    return {
-      items: [{ message: "Salut" }, { message: "Les amis" }]
-    };
+  props: {
+    ingredients: Object
   }
 };
 </script>

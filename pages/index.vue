@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>plop</h1>
-    <ListeIngredients />
+    <ListeIngredients :ingredients="ingredientsData" />
   </div>
 </template>
 
@@ -11,11 +11,10 @@ export default {
   components: { ListeIngredients },
   data() {
     return {
-      items: [{ message: "Salut" }, { message: "Les amis" }]
+      ingredientsData: [{ nom: "Salut" }, { nom: "Les amis" }]
     };
   }
 };
-
 </script>
 
 <style></style>
