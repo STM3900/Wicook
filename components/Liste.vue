@@ -1,11 +1,13 @@
 <template>
   <div>
-    <ul v-if="type == 'ingredient'">
+    <template v-if="type == 'ingredient'">
       <h3 v-if="listName != null">{{ listName }}</h3>
-      <li v-for="i in listData" :key="i.nom">
-        {{ i.quantity }} {{ i.unit }} de {{ i.name }}
-      </li>
-    </ul>
+      <ul>
+        <li v-for="i in listData" :key="i.nom">
+          {{ i.quantity }} {{ i.unit }} de {{ i.name }}
+        </li>
+      </ul>
+    </template>
     <ul v-if="type == 'ustencile'">
       <li v-for="i in listData" :key="i">
         {{ i }}

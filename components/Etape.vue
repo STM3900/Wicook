@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h3>{{ title }}</h3>
-    <img v-if="img.src" :src="img.src" :alt="img.alt" />
-    <p>{{ text }}</p>
+    <h3>Étape {{ numEtape }}</h3>
+    <img v-if="data.img.src" :src="data.img.src" :alt="data.img.alt" />
+    <p>{{ data.text }}</p>
   </div>
 </template>
 
@@ -10,16 +10,12 @@
 export default {
   name: "Etape",
   props: {
-    title: {
-      type: String,
+    data: {
+      type: Array,
       default: null
     },
-    img: {
-      type: Object,
-      default: null
-    },
-    text: {
-      type: String,
+    numEtape: {
+      type: Number,
       default: null
     }
   }
