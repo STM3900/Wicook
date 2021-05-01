@@ -1,13 +1,23 @@
 <template>
   <div>
     <h1>Wsh c'est l'accueil</h1>
+    <div v-for="page in data" :key="page.url">
+      <p>{{ page.author }}</p>
+      <nuxt-link :to="'/' + page.url">
+        Aller à la recette
+      </nuxt-link>
+    </div>
   </div>
 </template>
 
 <script>
+import MASTER_JSON from "../assets/json/MASTER_JSON";
+
 export default {
   data() {
-    return {};
+    return {
+      data: MASTER_JSON
+    };
   },
   methods: {}
 };

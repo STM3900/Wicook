@@ -29,7 +29,6 @@ export default {
     };
   },
   mounted() {
-    console.log(this.$route.params.slug);
     this.test();
   },
   methods: {
@@ -37,7 +36,6 @@ export default {
       return json.findIndex(x => x.url === this.$route.params.slug);
     },
     test() {
-      console.log(this.data);
       try {
         this.data = this.rawData[this.findIndex(this.rawData)].recetteInfos;
       } catch (error) {

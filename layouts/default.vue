@@ -1,6 +1,8 @@
 <template>
   <div>
-    <Nuxt />
+    <transition name="home">
+      <Nuxt />
+    </transition>
   </div>
 </template>
 
@@ -34,5 +36,14 @@
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+.home-enter-active,
+.home-leave-active {
+  transition: opacity 0.5s;
+}
+.home-enter,
+.home-leave-active {
+  opacity: 0;
 }
 </style>
