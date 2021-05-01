@@ -9,15 +9,22 @@
     />
     <Liste :listData="UstencileData" type="ustencile" />
     <Liste :listData="liste" type="normal" />
+    <Liste :listData="liste" type="num" />
+    <Etape
+      :title="etapeInfo.titre"
+      :img="etapeInfo.img"
+      :text="etapeInfo.text"
+    />
   </div>
 </template>
 
 <script>
 import Liste from "../components/Liste";
 import Infos from "../components/Infos";
+import Etape from "../components/Etape";
 
 export default {
-  components: { Liste, Infos },
+  components: { Liste, Infos, Etape },
   data() {
     return {
       nomDeRecette: "Un roulé",
@@ -44,7 +51,16 @@ export default {
         "Incorporer le sucre cosmique",
         "Inverser la polarité de l'univers",
         "Extraire les gnocchi cosmique"
-      ]
+      ],
+      etapeInfo: {
+        titre: "Gnocchi",
+        img: {
+          src:
+            "https://cdn.discordapp.com/attachments/806687737071403018/837996841185837066/protoduo.jpg"
+        },
+        text:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eligendi porro ea officiis impedit? Quos culpa ab veniam, sit beatae mollitia iste molestias similique veritatis obcaecati adipisci laudantium placeat rerum?"
+      }
     };
   }
 };

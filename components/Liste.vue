@@ -16,6 +16,11 @@
         {{ i }}
       </li>
     </ul>
+    <ol v-if="type == 'num'">
+      <li v-for="i in listData" :key="i">
+        {{ i }}
+      </li>
+    </ol>
   </div>
 </template>
 
