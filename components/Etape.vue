@@ -11,7 +11,7 @@ export default {
   name: "Etape",
   props: {
     data: {
-      type: Array,
+      type: Object,
       default: null
     },
     numEtape: {

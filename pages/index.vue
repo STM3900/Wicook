@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h1>{{ JSON_DATA.nomDeRecette }}</h1>
-    <Header :title="JSON_DATA.nomDeRecette" :info="JSON_DATA.infoHeader" />
+    <h1>{{ data.nomDeRecette }}</h1>
+    <Header :title="data.nomDeRecette" :info="data.infoHeader" />
     <hr />
     <Etape
-      v-for="(etape, i) in JSON_DATA.etapes"
+      v-for="(etape, i) in data.etapes"
       :key="i"
       :data="etape"
       :numEtape="i + 1"
@@ -18,76 +18,107 @@ import Liste from "../components/Liste";
 import Infos from "../components/Infos";
 import Etape from "../components/Etape";
 
+import MASTER_JSON from "../assets/json/MASTER_JSON";
+
 export default {
   components: { Header, Liste, Infos, Etape },
   data() {
     return {
-      JSON_DATA: {
-        nomDeRecette: "Un roulé",
+      data: MASTER_JSON[this.findIndex(MASTER_JSON)].recetteInfos
+    };
+  },
+  methods: {
+    findIndex(json) {
+      return json.findIndex(x => x.url === "blblblb");
+    }
+  }
+};
 
-        //Pour le header
-        infoHeader: {
-          img: {
-            src:
-              "https://www.pngix.com/pngfile/big/13-135416_1484620737971-357-kb-italian-chef-png-transparent-png.png",
-            alt: null
-          },
-          resume: {
-            time: 20,
-            difficulty: "Très facile",
-            cost: "Bon marché"
-          },
-          ingredients: [
-            { quantity: "100", unit: "g", name: "sucre" },
-            { quantity: "1", unit: "sachet", name: "sucre vanillé" },
-            { quantity: "1/2", unit: "sachet", name: "levure" },
-            { quantity: "20", unit: "cl", name: "lait" }
-          ],
-          tools: [
-            "Grille à gâteaux",
-            "Fouet",
-            "Cuillère en bois",
-            "Un extracteur de gnocchi"
-          ]
-        },
-        //Pour les étapes
-        etapes: [
-          {
-            title: "Gnocchi 1",
-            img: {
-              src: null,
-              alt: null
-            },
-            text: "sdhivhezsidhjcehiuzc"
-          },
-          {
-            title: "Gnocchi 2",
+/*
+  <Infos :infoObject="infos" />
+  <Liste
+    :listData="ingredientsData"
+    type="ingredient"
+    listName="Pour la gartiture"
+  />
+  <Liste :listData="UstencileData" type="ustencile" />
+  <Liste :listData="liste" type="normal" />
+  <Liste :listData="liste" type="num" />
+  <Etape
+    :title="etapeInfo.titre"
+    :img="etapeInfo.img"
+    :text="etapeInfo.text"
+  />
+*/
+
+/*
+        JSON_DATA: {
+          nomDeRecette: "Un roulé",
+
+          //Pour le header
+          infoHeader: {
             img: {
               src:
-                "https://lh3.googleusercontent.com/proxy/i16BMgJMaWfx78WnJAAtqqQ_0RI_GAwmatTpGlM41qpI450DQe83N8GvIfTk7R5ULozTBkmWQLFRR9xYTU1rxonAz-WPXCo",
+                "https://www.pngix.com/pngfile/big/13-135416_1484620737971-357-kb-italian-chef-png-transparent-png.png",
               alt: null
             },
-            text: "sdhivhezsidhjcehiuzc"
+            resume: {
+              time: 20,
+              difficulty: "Très facile",
+              cost: "Bon marché"
+            },
+            ingredients: [
+              { quantity: "100", unit: "g", name: "sucre" },
+              { quantity: "1", unit: "sachet", name: "sucre vanillé" },
+              { quantity: "1/2", unit: "sachet", name: "levure" },
+              { quantity: "20", unit: "cl", name: "lait" }
+            ],
+            tools: [
+              "Grille à gâteaux",
+              "Fouet",
+              "Cuillère en bois",
+              "Un extracteur de gnocchi"
+            ]
           },
-          {
-            title: "Gnocchi 3",
-            img: {
-              src: null,
-              alt: null
+          //Pour les étapes
+          etapes: [
+            {
+              title: "Gnocchi 1",
+              img: {
+                src: null,
+                alt: null
+              },
+              text: "sdhivhezsidhjcehiuzc"
             },
-            text: "sdhivhezsidhjcehiuzc"
-          },
-          {
-            title: "Gnocchi 4",
-            img: {
-              src: null,
-              alt: null
+            {
+              title: "Gnocchi 2",
+              img: {
+                src:
+                  "https://lh3.googleusercontent.com/proxy/i16BMgJMaWfx78WnJAAtqqQ_0RI_GAwmatTpGlM41qpI450DQe83N8GvIfTk7R5ULozTBkmWQLFRR9xYTU1rxonAz-WPXCo",
+                alt: null
+              },
+              text: "sdhivhezsidhjcehiuzc"
             },
-            text: "sdhivhezsidhjcehiuzc"
-          }
-        ]
-      }
-      /*
+            {
+              title: "Gnocchi 3",
+              img: {
+                src: null,
+                alt: null
+              },
+              text: "sdhivhezsidhjcehiuzc"
+            },
+            {
+              title: "Gnocchi 4",
+              img: {
+                src: null,
+                alt: null
+              },
+              text: "sdhivhezsidhjcehiuzc"
+            }
+          ]
+        }
+      */
+/*
         infos: {
           preparationTime: 20,
           cookingTime: 15,
@@ -122,26 +153,6 @@ export default {
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eligendi porro ea officiis impedit? Quos culpa ab veniam, sit beatae mollitia iste molestias similique veritatis obcaecati adipisci laudantium placeat rerum?"
         }
       */
-    };
-  }
-};
-
-/*
-  <Infos :infoObject="infos" />
-  <Liste
-    :listData="ingredientsData"
-    type="ingredient"
-    listName="Pour la gartiture"
-  />
-  <Liste :listData="UstencileData" type="ustencile" />
-  <Liste :listData="liste" type="normal" />
-  <Liste :listData="liste" type="num" />
-  <Etape
-    :title="etapeInfo.titre"
-    :img="etapeInfo.img"
-    :text="etapeInfo.text"
-  />
-*/
 </script>
 
 <style>
