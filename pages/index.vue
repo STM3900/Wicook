@@ -7,6 +7,7 @@
         Aller à la recette
       </nuxt-link>
     </div>
+    <fa :icon="['fas', 'home']" />
   </div>
 </template>
 

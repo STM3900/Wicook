@@ -13,5 +13,10 @@
     "nuxt": "^2.14.12",
     "vue-cute-timeline": "^1.2.8"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-regular-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "nuxt-fontawesome": "^0.4.0"
+  }
 }

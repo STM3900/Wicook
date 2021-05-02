@@ -36,6 +36,20 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    ['nuxt-fontawesome', {
+      component: 'fa', //customize component name
+      imports: [{
+          set: '@fortawesome/free-solid-svg-icons',
+          icons: ['faHome']
+          },
+          {set: '@fortawesome/free-brands-svg-icons',
+          icons: []
+          },
+          {set: '@fortawesome/free-regular-svg-icons',
+          icons: []
+          },
+      ]
+   }]
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -51,5 +65,9 @@ export default {
 			'/gnocchi',
       '/oui',
 		]
-	}
+	},
+
+  router: {
+    base: '/dist/'
+  }
 }
