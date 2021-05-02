@@ -7,6 +7,10 @@
 </template>
 
 <style>
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+
 .button--green {
   display: inline-block;
   border-radius: 4px;
