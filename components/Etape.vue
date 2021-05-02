@@ -3,8 +3,12 @@
     <timeline :class="completed ? 'inactive' : ''">
       <timeline-title bg-color="#d3d3d3"
         ><h3 @click="completed = !completed">Étape {{ numEtape }}</h3>
-        <div v-if="data.img.src" class="img">
-          <img :src="data.img.src" :alt="data.img.alt" />
+        <div v-if="data.img.src" class="img" @click="expend = !expend">
+          <img
+            :class="expend ? 'img-expend' : 'img-base'"
+            :src="data.img.src"
+            :alt="data.img.alt"
+          />
         </div>
         <p>{{ data.text }}</p></timeline-title
       >
@@ -24,7 +28,8 @@ export default {
   },
   data() {
     return {
-      completed: false
+      completed: false,
+      expend: false
     };
   },
   props: {
@@ -55,9 +60,22 @@ h3:hover {
 }
 
 .img img {
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.img img:hover {
+  cursor: pointer;
+}
+
+.img-base {
   width: 50%;
   height: 250px;
-  object-fit: cover;
+}
+
+.img-expend {
+  width: 100%;
+  height: 500px;
 }
 
 .timeline {
