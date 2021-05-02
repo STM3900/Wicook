@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>{{ title }}</h3>
+    <h1>{{ title }}</h1>
     <img v-if="info.img.src" :src="info.img.src" :alt="info.img.alt" />
     <h2>Infos :</h2>
     <ul v-if="info.resume">
@@ -41,4 +41,9 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+h1{
+  font-size: 3rem;
+  font-weight: 300;
+}
+</style>

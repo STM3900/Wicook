@@ -1,6 +1,5 @@
 <template>
   <div v-if="data">
-    <h1>{{ data.nomDeRecette }}</h1>
     <Header :title="data.nomDeRecette" :info="data.infoHeader" />
     <hr />
     <Etape
