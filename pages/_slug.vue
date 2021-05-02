@@ -1,5 +1,6 @@
 <template>
   <div v-if="data">
+    <HomeButton />
     <Header
       :title="data.nomDeRecette"
       :author="data.author"
@@ -18,6 +19,7 @@
 </template>
 
 <script>
+import HomeButton from "../components/HomeButton";
 import Header from "../components/Header";
 import Liste from "../components/Liste";
 import Infos from "../components/Infos";
@@ -26,7 +28,7 @@ import Etape from "../components/Etape";
 import MASTER_JSON from "../assets/json/MASTER_JSON";
 
 export default {
-  components: { Header, Liste, Infos, Etape },
+  components: { HomeButton, Header, Liste, Infos, Etape },
   data() {
     return {
       rawData: MASTER_JSON,
