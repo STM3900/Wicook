@@ -1,7 +1,10 @@
 <template>
   <div v-if="data">
-    <Header :title="data.nomDeRecette" :info="data.infoHeader" />
-    <hr />
+    <Header
+      :title="data.nomDeRecette"
+      :author="data.author"
+      :info="data.infoHeader"
+    />
     <Etape
       v-for="(etape, i) in data.etapes"
       :key="i"

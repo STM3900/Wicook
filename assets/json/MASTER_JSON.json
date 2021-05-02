@@ -1,12 +1,12 @@
 [
   {
     "url": "gnocchi",
-    "author": "Théo",
     "recetteInfos": {
       "nomDeRecette": "Gnocchi maison",
+      "author": "Théo",
       "infoHeader": {
         "img": {
-          "src": "https://www.pngix.com/pngfile/big/13-135416_1484620737971-357-kb-italian-chef-png-transparent-png.png",
+          "src": "https://res.cloudinary.com/swissmilk/image/fetch/w_1600,c_fill,g_auto,f_auto,q_auto:eco,ar_16:9/https://api.swissmilk.ch/wp-content/uploads/2019/06/gnocchi-grundrezept-2560x1707.jpg",
           "alt": null
         },
         "resume": {
@@ -15,6 +15,16 @@
           "cost": "Bon marché"
         },
         "ingredients": [
+          {
+            "quantity": "100",
+            "unit": "g",
+            "name": "sucre"
+          },
+          {
+            "quantity": "100",
+            "unit": "g",
+            "name": "sucre"
+          },
           {
             "quantity": "100",
             "unit": "g",

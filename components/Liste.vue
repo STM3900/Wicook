@@ -1,10 +1,9 @@
 <template>
   <div>
     <template v-if="type == 'ingredient'">
-      <h3 v-if="listName != null">{{ listName }}</h3>
       <ul>
         <li v-for="i in listData" :key="i.nom">
-          {{ i.quantity }} {{ i.unit }} de {{ i.name }}
+          <b>{{ i.quantity }} {{ i.unit }}</b> de {{ i.name }}
         </li>
       </ul>
     </template>
@@ -43,4 +42,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+ul {
+  color: #2b2b2b;
+}
+</style>
