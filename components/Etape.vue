@@ -1,8 +1,8 @@
 <template>
   <div>
-    <timeline>
+    <timeline :class="completed ? 'inactive' : ''">
       <timeline-title bg-color="#d3d3d3"
-        ><h3>Étape {{ numEtape }}</h3>
+        ><h3 @click="completed = !completed">Étape {{ numEtape }}</h3>
         <div v-if="data.img.src" class="img">
           <img :src="data.img.src" :alt="data.img.alt" />
         </div>
@@ -21,6 +21,11 @@ export default {
     Timeline,
     TimelineItem,
     TimelineTitle
+  },
+  data() {
+    return {
+      completed: false
+    };
   },
   props: {
     data: {
@@ -41,6 +46,10 @@ h3 {
   font-size: 1.3rem;
 }
 
+h3:hover {
+  cursor: pointer;
+}
+
 .step {
   margin-left: 20px;
 }
@@ -51,8 +60,16 @@ h3 {
   object-fit: cover;
 }
 
+.timeline {
+  transition: 0.3s;
+}
+
 .timeline-title:hover {
   cursor: auto;
   color: #d3d3d3;
+}
+
+.inactive {
+  opacity: 0.5;
 }
 </style>
