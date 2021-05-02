@@ -5,12 +5,15 @@
       :author="data.author"
       :info="data.infoHeader"
     />
-    <Etape
-      v-for="(etape, i) in data.etapes"
-      :key="i"
-      :data="etape"
-      :numEtape="i + 1"
-    />
+    <hr />
+    <div class="steps">
+      <Etape
+        v-for="(etape, i) in data.etapes"
+        :key="i"
+        :data="etape"
+        :numEtape="i + 1"
+      />
+    </div>
   </div>
 </template>
 
@@ -54,5 +57,10 @@ body {
   margin: 0;
   margin-right: 20%;
   margin-left: 20%;
+}
+
+.steps {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 </style>

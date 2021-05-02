@@ -26,7 +26,7 @@
         <Liste :listData="info.ingredients" type="ingredient" />
       </div>
       <div v-if="info.tools">
-        <h3>Ustenciles :</h3>
+        <h3>Ustensiles :</h3>
         <Liste :listData="info.tools" type="ustencile" />
       </div>
     </div>

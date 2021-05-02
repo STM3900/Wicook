@@ -55,36 +55,32 @@
       },
       "etapes": [
         {
-          "title": "Gnocchi 1",
+          "img": {
+            "src": null,
+            "alt": null 
+          },
+          "text": "Foutre les patates dans l'eau jsp"
+        },
+        {
+          "img": {
+            "src": "https://tangerinezest.com/wp-content/uploads/2020/03/Gnocchi-maison-%C3%A0-la-pomme-de-terre-DSC_2133-scaled.jpg",
+            "alt": null
+          },
+          "text": "Réduire les patates en purée et mettre les oeufs et la farineeeeeeeee pour faire le mothergnocchi"
+        },
+        {
           "img": {
             "src": null,
             "alt": null
           },
-          "text": "sdhivhezsidhjcehiuzc"
+          "text": "Faire des sssssserpents et ensuite les couper pour faire les gnocchi pas encore fini et enfin les rouler avec une fourchette et voila la zone"
         },
         {
-          "title": "Gnocchi 2",
-          "img": {
-            "src": "https://lh3.googleusercontent.com/proxy/i16BMgJMaWfx78WnJAAtqqQ_0RI_GAwmatTpGlM41qpI450DQe83N8GvIfTk7R5ULozTBkmWQLFRR9xYTU1rxonAz-WPXCo",
-            "alt": null
-          },
-          "text": "sdhivhezsidhjcehiuzc"
-        },
-        {
-          "title": "Gnocchi 3",
           "img": {
             "src": null,
             "alt": null
           },
-          "text": "sdhivhezsidhjcehiuzc"
-        },
-        {
-          "title": "Gnocchi 4",
-          "img": {
-            "src": null,
-            "alt": null
-          },
-          "text": "sdhivhezsidhjcehiuzc"
+          "text": "Les faire cuire dans l'eau bouillante genre 3 minutes le temps qu'ils remontent à la surface etou"
         }
       ]
     }
