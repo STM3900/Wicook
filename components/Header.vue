@@ -62,6 +62,7 @@ h1 {
   font-weight: 300;
   margin-left: -4px;
   margin-bottom: 0;
+  color: #ec5353;
 }
 
 p {
@@ -116,5 +117,6 @@ p {
 
 .list div h3 {
   font-size: 1.5rem;
+  color: #ec5353;
 }
 </style>

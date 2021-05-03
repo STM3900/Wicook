@@ -20,7 +20,7 @@ div {
   top: 75px;
   font-size: 20px;
   color: white;
-  background: rgb(39, 39, 39);
+  background: #ec5353;
   padding: 10px;
   padding-left: 30px;
   transition: 0.3s;

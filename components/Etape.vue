@@ -1,7 +1,7 @@
 <template>
   <div>
     <timeline :class="completed ? 'inactive' : ''">
-      <timeline-title bg-color="#d3d3d3"
+      <timeline-title bg-color="#FFB39F"
         ><h3 @click="completed = !completed">Étape {{ numEtape }}</h3>
         <div v-if="data.img.src" class="img" @click="expend = !expend">
           <img
@@ -49,6 +49,7 @@ export default {
 h3 {
   margin-top: 0;
   font-size: 1.3rem;
+  color: #ec5353;
 }
 
 h3:hover {

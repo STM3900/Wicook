@@ -1,14 +1,50 @@
 <template>
   <div>
-    <transition name="home">
-      <Nuxt />
-    </transition>
+    <div class="wrapper">
+      <transition name="home">
+        <Nuxt />
+      </transition>
+      <div class="push"></div>
+    </div>
+    <Footer class="footer" />
   </div>
 </template>
 
+<script>
+import Footer from "../components/Footer";
+
+export default {
+  components: {
+    Footer
+  }
+};
+</script>
+
 <style>
-body{
-  font-family: 'Open Sans', sans-serif;
+html,
+body {
+  min-height: 80vh;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+.wrapper {
+  min-height: 93vh;
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -50px;
+}
+.footer,
+.push {
+  height: 50px;
+}
+
+.link {
+  color: #ec5353;
+  transition: 0.3s;
+}
+
+.link:hover {
+  color: #b44444;
 }
 
 .button--green {

@@ -1,13 +1,17 @@
 <template>
   <div>
-    <h1>Wicook</h1>
-    <fa class="icon" :icon="['fas', 'search']" />
-    <input
-      type="text"
-      v-model="filterValue"
-      placeholder="Chercher une recette"
-    />
-    <article>
+    <div class="logo">
+      <img src="../assets/logo.svg" alt="" />
+    </div>
+    <div>
+      <fa class="icon" :icon="['fas', 'search']" />
+      <input
+        type="text"
+        v-model="filterValue"
+        placeholder="Chercher une recette"
+      />
+    </div>
+    <article v-if="data.length > 0">
       <template v-for="page in data">
         <div
           v-if="filter(page.recetteInfos.nomDeRecette)"
@@ -29,11 +33,18 @@
         </div></template
       >
     </article>
+    <article v-else class="no-recipe">
+      <p>
+        Pas de recettes ! Ajoutez en avec le
+        <a href="../assets/json/MASTER_JSON.json" class="link" download>json</a>
+        dédié !
+      </p>
+    </article>
   </div>
 </template>
 
 <script>
-import MASTER_JSON from "../assets/json/MASTER_JSON";
+import MASTER_JSON from "~/assets/json/MASTER_JSON";
 
 export default {
   data() {
@@ -58,12 +69,6 @@ export default {
     }
   }
 };
-
-/**
-  <nuxt-link :to="'/' + page.url">
-    Aller à la recette
-  </nuxt-link>
-*/
 </script>
 
 <style>
@@ -71,6 +76,26 @@ body {
   margin: 0;
   margin-right: 20%;
   margin-left: 20%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.logo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.logo img {
+  height: 125px;
 }
 
 .card {
@@ -98,6 +123,7 @@ article {
   align-items: flex-start;
   align-content: center;
   gap: 2em;
+  margin-bottom: 30px;
 }
 
 input {
@@ -121,7 +147,7 @@ input:focus {
   position: absolute;
   padding: 27px 20px 27px 15px;
   font-size: 18px;
-  color: #757575;
+  color: #ec5353;
 }
 
 .card .img img {
@@ -144,5 +170,10 @@ input:focus {
   margin: 0;
   color: rgb(87, 87, 87);
   font-size: 14px;
+}
+
+.no-recipe p {
+  width: 100%;
+  text-align: center;
 }
 </style>
