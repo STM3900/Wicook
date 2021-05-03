@@ -1,6 +1,6 @@
 <template>
   <div v-if="data">
-    <HomeButton />
+    <HomeButton title="Accueil" icon="home" link="/" :fontSize="20" />
     <Header
       :title="data.nomDeRecette"
       :author="data.author"

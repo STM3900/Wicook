@@ -1,5 +1,11 @@
 <template>
   <div>
+    <HomeButton
+      title="Comment poster une recette ?"
+      icon="home"
+      link="/tuto"
+      :fontSize="16"
+    />
     <div class="logo">
       <img src="../assets/logo.svg" alt="" />
     </div>
@@ -11,6 +17,7 @@
         placeholder="Chercher une recette"
       />
     </div>
+    <p>Comment poster une recette ?</p>
     <article v-if="data.length > 0">
       <template v-for="page in data">
         <div
@@ -44,9 +51,11 @@
 </template>
 
 <script>
+import HomeButton from "../components/HomeButton";
 import MASTER_JSON from "~/assets/json/MASTER_JSON";
 
 export default {
+  components: { HomeButton },
   data() {
     return {
       data: MASTER_JSON,

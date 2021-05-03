@@ -1,13 +1,21 @@
 <template>
-  <div @click="goHome"><fa :icon="['fas', 'home']" /> Accueil</div>
+  <div @click="goHome" :style="`font-size:${fontSize}px;`">
+    <fa :icon="['fas', icon]" /> {{ title }}
+  </div>
 </template>
 
 <script>
 export default {
   name: "HomeButton",
+  props: {
+    title: String,
+    icon: String,
+    link: String,
+    fontSize: Number
+  },
   methods: {
     goHome() {
-      this.$router.push("/");
+      this.$router.push(this.link);
     }
   }
 };
@@ -18,7 +26,6 @@ div {
   position: fixed;
   left: 0;
   top: 75px;
-  font-size: 20px;
   color: white;
   background: #ec5353;
   padding: 10px;
