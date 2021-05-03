@@ -37,4 +37,8 @@ div:hover {
   padding-left: 25px;
   cursor: pointer;
 }
+
+div:active {
+  transform: rotate(1deg);
+}
 </style>

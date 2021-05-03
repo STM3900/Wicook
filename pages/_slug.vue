@@ -7,6 +7,10 @@
       :info="data.infoHeader"
     />
     <hr />
+    <p class="info">
+      Vous pouvez cliquer sur le titre d'une étape pour la marquer comme
+      complétée
+    </p>
     <div class="steps">
       <Etape
         v-for="(etape, i) in data.etapes"
@@ -64,5 +68,10 @@ body {
 .steps {
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+.info {
+  color: rgb(197, 197, 197);
+  font-style: italic;
 }
 </style>

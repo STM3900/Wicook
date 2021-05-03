@@ -123,6 +123,10 @@ body {
   cursor: pointer;
 }
 
+.card:active {
+  transform: scale(0.95);
+}
+
 article {
   display: flex;
   flex-wrap: wrap;

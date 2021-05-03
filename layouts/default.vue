@@ -111,6 +111,22 @@ body {
   transform-origin: top;
   animation: bounce-out 0.5s;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #ffffff;
+  border-left: 1px solid #ffffff;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ec5353;
+  border-left: 0px solid #ffffff;
+}
+
 @keyframes bounce-in {
   0% {
     transform: scale(0);
