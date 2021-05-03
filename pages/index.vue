@@ -2,7 +2,7 @@
   <div>
     <HomeButton
       title="Comment poster une recette ?"
-      icon="home"
+      icon="code"
       link="/tuto"
       :fontSize="16"
     />
@@ -17,7 +17,6 @@
         placeholder="Chercher une recette"
       />
     </div>
-    <p>Comment poster une recette ?</p>
     <article v-if="data.length > 0">
       <template v-for="page in data">
         <div
@@ -43,7 +42,7 @@
     <article v-else class="no-recipe">
       <p>
         Pas de recettes ! Ajoutez en avec le
-        <a href="../assets/json/MASTER_JSON.json" class="link" download>json</a>
+        <NuxtLink to="/tuto" class="link">json</NuxtLink>
         dédié !
       </p>
     </article>

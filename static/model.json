@@ -1,0 +1,82 @@
+{
+  // L'url de la page de votre recette (ex : gnocchi)
+  "url": "",
+  // Les informations de la recette
+  "recetteInfos": {
+    // Le nom de votre recette
+    "nomDeRecette": "",
+    // Le nom de l'auteur de la recette (vous en théorie)
+    "author": "",
+    // Les informations sur l'entête de votre recette
+    "infoHeader": {
+      // L'image de votre entête :
+      "img": {
+        // Le lien de votre image (ex : https://urlz.fr/fz63)
+        "src": "",
+        // Sa description si l'image ne charge pas
+        "alt": ""
+      },
+      // Les infos pratiques de votre recette :
+      "resume": {
+        // Le temps de préparation (cuisson comprise, en minute, doit être un nombre)
+        "time": 0,
+        // La difficulté de votre recette (Très facile, facile, normal, difficile, très difficile)
+        "difficulty": "",
+        // Le cout de votre recette (Bon marché, abordable, moyenne, couteuse)
+        "cost": ""
+      },
+      // Les ingrédients requis pour votre recette
+      "ingredients": [
+        {
+          // La quantité (ex : 100)
+          "quantity": "",
+          // L'unité (ex : g)
+          "unit": "",
+          // Le nom de l'ingrédient (ex : sucre)
+          "name": ""
+        },
+        // ^-- mettez une virgule entre chaque ingrédient
+        {
+          "quantity": "",
+          "unit": "",
+          "name": ""
+        }
+        // ^-- enlevez la virgule lorsque c'est le dernier ingrédient
+      ],
+      //les ustensiles requis (vous pouvez en rajouter autant que vous le souhaitez)
+      "tools": [
+        "Ustensile 1",
+        "Ustensile 2",
+        "Ustensile 3",
+        "Ustensile 4",
+        "Etc..."
+      ]
+    },
+    // Les étapes de votre recettes
+    "etapes": [
+      // Comme plus haut vous pouvez en ajouter autant que vous voulez de la même manière
+      {
+        // L'image de votre étape :
+        "img": {
+          // Le lien de votre image (ex : https://urlz.fr/fz63)
+          "src": "",
+          // Sa description si l'image ne charge pas
+          "alt": ""
+        },
+        // La description de votre étape
+        "text": ""
+      },
+      // ^-- mettez une virgule entre chaque étape
+      {
+        "img": {
+          "src": "",
+          "alt": ""
+        },
+        "text": ""
+      }
+      // ^-- enlevez la virgule lorsque c'est la dernière étape
+    ]
+  }
+}
+
+// Vous avez terminé !
