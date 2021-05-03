@@ -40,7 +40,7 @@ export default {
       component: 'fa', //customize component name
       imports: [{
           set: '@fortawesome/free-solid-svg-icons',
-          icons: ['faHome']
+          icons: ['faHome', 'faSearch']
           },
           {set: '@fortawesome/free-brands-svg-icons',
           icons: []

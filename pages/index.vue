@@ -1,12 +1,34 @@
 <template>
   <div>
-    <h1>Wsh c'est l'accueil</h1>
-    <div v-for="page in data" :key="page.url">
-      <p>{{ page.author }}</p>
-      <nuxt-link :to="'/' + page.url">
-        Aller à la recette
-      </nuxt-link>
-    </div>
+    <h1>Wicook</h1>
+    <fa class="icon" :icon="['fas', 'search']" />
+    <input
+      type="text"
+      v-model="filterValue"
+      placeholder="Chercher une recette"
+    />
+    <article>
+      <template v-for="page in data">
+        <div
+          v-if="filter(page.recetteInfos.nomDeRecette)"
+          :key="page.url"
+          class="card"
+          @click="goToRecipe(page.url)"
+        >
+          <div class="img">
+            <img
+              v-if="page.recetteInfos.infoHeader.img.src"
+              :src="page.recetteInfos.infoHeader.img.src"
+              :alt="page.recetteInfos.infoHeader.img.alt"
+            />
+          </div>
+          <div class="text">
+            <h3>{{ page.recetteInfos.nomDeRecette }}</h3>
+            <p>Par {{ page.recetteInfos.author }}</p>
+          </div>
+        </div></template
+      >
+    </article>
   </div>
 </template>
 
@@ -16,10 +38,32 @@ import MASTER_JSON from "../assets/json/MASTER_JSON";
 export default {
   data() {
     return {
-      data: MASTER_JSON
+      data: MASTER_JSON,
+      filterValue: ""
     };
+  },
+  methods: {
+    goToRecipe(url) {
+      this.$router.push("/" + url);
+    },
+    filter(name) {
+      let temp = false;
+      if (name.toLowerCase().includes(this.filterValue.toLowerCase())) {
+        temp = true;
+      } else if (!this.filterValue) {
+        temp = true;
+      }
+
+      return temp;
+    }
   }
 };
+
+/**
+  <nuxt-link :to="'/' + page.url">
+    Aller à la recette
+  </nuxt-link>
+*/
 </script>
 
 <style>
@@ -27,5 +71,78 @@ body {
   margin: 0;
   margin-right: 20%;
   margin-left: 20%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: center;
+
+  width: 30%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: rotate(1deg);
+  cursor: pointer;
+}
+
+article {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: center;
+  gap: 2em;
+}
+
+input {
+  width: 100%;
+  /* haut | droit | bas | gauche */
+  padding: 15px 20px 15px 40px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: solid rgb(87, 87, 87) 1px;
+  font-family: "Open Sans", sans-serif;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border: solid black 1px;
+}
+
+.icon {
+  position: absolute;
+  padding: 27px 20px 27px 15px;
+  font-size: 18px;
+  color: #757575;
+}
+
+.card .img img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card .text {
+  padding: 20px;
+  padding-top: 10px;
+}
+
+.card .text h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.card .text p {
+  margin: 0;
+  color: rgb(87, 87, 87);
+  font-size: 14px;
 }
 </style>
