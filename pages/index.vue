@@ -130,6 +130,11 @@ input {
   width: 100%;
   /* haut | droit | bas | gauche */
   padding: 15px 20px 15px 40px;
+
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+
   margin-top: 10px;
   margin-bottom: 20px;
   border: solid rgb(87, 87, 87) 1px;
