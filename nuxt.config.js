@@ -62,8 +62,6 @@ export default {
 
   generate: {
 		routes: [
-			'/gnocchi',
-      '/oui',
 		]
 	},
 
