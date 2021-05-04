@@ -18,8 +18,10 @@
       },
       // Les infos pratiques de votre recette :
       "resume": {
-        // Le temps de préparation (cuisson comprise, en minute, doit être un nombre)
-        "time": 0,
+        // Le temps de préparation (sans la cuisson, en minutes, doit être un nombre)
+        "preparationTime": 0,
+        // Le temps de cuisson (en minutes, doit être un nombre)
+        "cookingTime": 15,
         // La difficulté de votre recette (Très facile, facile, normal, difficile, très difficile)
         "difficulty": "",
         // Le cout de votre recette (Bon marché, abordable, moyenne, couteuse)

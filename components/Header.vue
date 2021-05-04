@@ -4,9 +4,13 @@
     <p v-if="author">Par : {{ author }}</p>
     <hr />
     <div v-if="info.resume" class="resume">
-      <section v-if="info.resume.time">
+      <section v-if="info.resume.preparationTime">
         <p>Temps de préparation :</p>
-        <h3>{{ info.resume.time }} minutes</h3>
+        <h3>{{ info.resume.preparationTime }} minutes</h3>
+      </section>
+      <section v-if="info.resume.cookingTime">
+        <p>Temps de cuisson :</p>
+        <h3>{{ info.resume.cookingTime }} minutes</h3>
       </section>
       <section v-if="info.resume.difficulty">
         <p>Difficulté :</p>
