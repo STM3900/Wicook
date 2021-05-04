@@ -1,4 +1,6 @@
-# wikook
+![Wicook banière](https://user-images.githubusercontent.com/44432694/117033730-f496de80-ad02-11eb-8739-c4ca9cee4c73.jpg)
+---
+Wicook est un site de cuisine communautaire, fait en nuxt.js (framework de vue.js), où tout le monde peut poster ses recettes en utilisant un json modèle
 
 ## Build Setup
 
