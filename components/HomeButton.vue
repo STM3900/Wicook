@@ -1,6 +1,6 @@
 <template>
   <div @click="goHome" :style="`font-size:${fontSize}px;`">
-    <fa :icon="['fas', icon]" /><span v-if="getScreenWidth > 880">
+    <fa class="icon-responsive" :icon="['fas', icon]" /><span class="text">
       {{ title }}</span
     >
   </div>
@@ -17,13 +17,6 @@ export default {
   },
   data() {
     return {};
-  },
-  computed: {
-    getScreenWidth: function() {
-      if (process.browser) {
-        return window.innerWidth;
-      }
-    }
   },
   methods: {
     goHome() {
@@ -59,6 +52,10 @@ div:active {
 @media screen and (max-width: 880px) {
   div {
     padding-left: 15px;
+    width: 25px;
+    height: 24px;
+    overflow: hidden;
+    font-size: 20px !important;
   }
 }
 </style>

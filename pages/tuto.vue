@@ -37,14 +37,7 @@
 import HomeButton from "../components/HomeButton";
 
 export default {
-  components: { HomeButton },
-  data() {
-    return {
-      listData: ["blblblb", "deeeee", 'eeeeee <a href="">sss</a>']
-    };
-  },
-
-  methods: {}
+  components: { HomeButton }
 };
 </script>
 
