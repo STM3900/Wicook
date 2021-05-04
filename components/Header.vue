@@ -5,19 +5,19 @@
     <hr />
     <div v-if="info.resume" class="resume">
       <section v-if="info.resume.preparationTime">
-        <p>Temps de préparation :</p>
+        <p>Temps de préparation&nbsp;:</p>
         <h3>{{ info.resume.preparationTime }} minutes</h3>
       </section>
       <section v-if="info.resume.cookingTime">
-        <p>Temps de cuisson :</p>
+        <p>Temps de cuisson&nbsp;:</p>
         <h3>{{ info.resume.cookingTime }} minutes</h3>
       </section>
       <section v-if="info.resume.difficulty">
-        <p>Difficulté :</p>
+        <p>Difficulté&nbsp;:</p>
         <h3>{{ info.resume.difficulty }}</h3>
       </section>
       <section v-if="info.resume.cost">
-        <p>Cout :</p>
+        <p>Cout&nbsp;:</p>
         <h3>{{ info.resume.cost }}</h3>
       </section>
     </div>
@@ -26,11 +26,11 @@
     </div>
     <div class="list">
       <div v-if="info.ingredients">
-        <h3>Ingrédients :</h3>
+        <h3>Ingrédients&nbsp;:</h3>
         <Liste :listData="info.ingredients" class="list-ul" type="ingredient" />
       </div>
       <div v-if="info.tools">
-        <h3>Ustensiles :</h3>
+        <h3>Ustensiles&nbsp;:</h3>
         <Liste :listData="info.tools" class="list-ul" type="ustencile" />
       </div>
     </div>
