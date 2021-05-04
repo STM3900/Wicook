@@ -48,13 +48,7 @@ export default {
 };
 </script>
 
-<style>
-body {
-  margin: 0;
-  margin-right: 20%;
-  margin-left: 20%;
-}
-
+<style scoped>
 h1 {
   font-size: 2.7rem;
   font-weight: 300;

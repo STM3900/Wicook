@@ -46,4 +46,22 @@ export default {
 ul {
   color: #2b2b2b;
 }
+
+@media screen and (max-width: 880px) {
+  ul {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  ul {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  ul {
+    width: 80%;
+  }
+}
 </style>

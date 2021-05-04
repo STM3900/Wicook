@@ -80,12 +80,6 @@ export default {
 </script>
 
 <style>
-body {
-  margin: 0;
-  margin-right: 20%;
-  margin-left: 20%;
-}
-
 .content {
   flex: 1 0 auto;
 }
@@ -104,6 +98,18 @@ body {
 
 .logo img {
   height: 125px;
+  transition: 0.3s;
+}
+
+article {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: center;
+  gap: 2em;
+  margin-bottom: 30px;
 }
 
 .card {
@@ -125,17 +131,6 @@ body {
 
 .card:active {
   transform: scale(0.95);
-}
-
-article {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  align-content: center;
-  gap: 2em;
-  margin-bottom: 30px;
 }
 
 input {
@@ -192,5 +187,44 @@ input:focus {
 .no-recipe p {
   width: 100%;
   text-align: center;
+}
+
+@media screen and (max-width: 810px) {
+  .card {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  article {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .logo img {
+    height: 75px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .logo img {
+    height: 60px;
+  }
+
+  .card .img img {
+    height: 100px;
+  }
+
+  .card .text {
+    padding: 15px;
+    padding-top: 5px;
+  }
+
+  .card .text h3 {
+    font-size: 1.2rem;
+  }
 }
 </style>

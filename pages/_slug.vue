@@ -59,19 +59,23 @@ export default {
 </script>
 
 <style>
-body {
-  margin: 0;
-  margin-right: 20%;
-  margin-left: 20%;
-}
-
 .steps {
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 50px;
 }
 
 .info {
   color: rgb(197, 197, 197);
   font-style: italic;
+}
+
+@media screen and (max-width: 400px) {
+  .info {
+    font-size: 14px;
+  }
+
+  .steps {
+    margin-top: 25px;
+  }
 }
 </style>

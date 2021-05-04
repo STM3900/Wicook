@@ -1,6 +1,8 @@
 <template>
   <div @click="goHome" :style="`font-size:${fontSize}px;`">
-    <fa :icon="['fas', icon]" /> {{ title }}
+    <fa :icon="['fas', icon]" /><span v-if="getScreenWidth > 880">
+      {{ title }}</span
+    >
   </div>
 </template>
 
@@ -12,6 +14,16 @@ export default {
     icon: String,
     link: String,
     fontSize: Number
+  },
+  data() {
+    return {};
+  },
+  computed: {
+    getScreenWidth: function() {
+      if (process.browser) {
+        return window.innerWidth;
+      }
+    }
   },
   methods: {
     goHome() {
@@ -31,6 +43,8 @@ div {
   padding: 10px;
   padding-left: 30px;
   transition: 0.3s;
+
+  z-index: 1000;
 }
 
 div:hover {
@@ -40,5 +54,11 @@ div:hover {
 
 div:active {
   transform: rotate(1deg);
+}
+
+@media screen and (max-width: 880px) {
+  div {
+    padding-left: 15px;
+  }
 }
 </style>

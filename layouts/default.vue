@@ -25,6 +25,12 @@ body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
 }
+
+body {
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
 .wrapper {
   min-height: 93vh;
   /* Equal to height of footer */
@@ -147,6 +153,20 @@ body {
   }
   100% {
     transform: scale(0);
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  body {
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  body {
+    margin-right: 5%;
+    margin-left: 5%;
   }
 }
 </style>

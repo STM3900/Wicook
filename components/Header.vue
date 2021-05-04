@@ -23,11 +23,11 @@
     <div class="list">
       <div v-if="info.ingredients">
         <h3>Ingrédients :</h3>
-        <Liste :listData="info.ingredients" type="ingredient" />
+        <Liste :listData="info.ingredients" class="list-ul" type="ingredient" />
       </div>
       <div v-if="info.tools">
         <h3>Ustensiles :</h3>
-        <Liste :listData="info.tools" type="ustencile" />
+        <Liste :listData="info.tools" class="list-ul" type="ustencile" />
       </div>
     </div>
   </div>
@@ -118,5 +118,73 @@ p {
 .list div h3 {
   font-size: 1.5rem;
   color: #ec5353;
+}
+
+@media screen and (max-width: 880px) {
+  .resume section {
+    margin-right: 40px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .resume {
+    flex-wrap: wrap;
+    gap: 1em 0px;
+    margin-top: 20px;
+  }
+
+  .resume section {
+    width: 40%;
+  }
+
+  .resume section p {
+    color: gray;
+    font-size: 13px;
+    margin: 0;
+  }
+
+  .resume section h3 {
+    font-size: 25px;
+    margin: 0;
+  }
+
+  .img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .resume section {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .resume section h3 {
+    font-size: 22px;
+  }
+
+  .list {
+    flex-direction: column;
+  }
+
+  .list div {
+    width: 100%;
+  }
+
+  .list div h3 {
+    font-size: 1.3rem;
+    color: #ec5353;
+  }
 }
 </style>

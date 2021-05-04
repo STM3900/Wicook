@@ -46,6 +46,11 @@ export default {
 </script>
 
 <style scoped>
+.timeline {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
 h3 {
   margin-top: 0;
   font-size: 1.3rem;
@@ -90,5 +95,23 @@ h3:hover {
 
 .inactive {
   opacity: 0.5;
+}
+
+@media screen and (max-width: 650px) {
+  .img-base {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .timeline {
+    margin: 0;
+  }
+
+  .img-base {
+    width: 100%;
+    height: 150px;
+  }
 }
 </style>
