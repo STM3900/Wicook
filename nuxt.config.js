@@ -1,14 +1,14 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Wikook',
+    title: 'Wicook',
     htmlAttrs: {
       lang: 'fr'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: 'Envie de cuisiner ? Sur Wicook, retrouvez des recettes conçues avec amour !' }
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: './favicon.png' },

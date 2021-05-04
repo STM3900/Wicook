@@ -4,7 +4,7 @@
     <h1>Comment poster une recette ?</h1>
     <hr />
     <p>
-      Envie de mettre les mains à la pâte ? Rien de plus simple ! Vous pouvez
+      Envie de mettre la main à la pâte ? Rien de plus simple ! Vous pouvez
       ajouter votre recette en suivant ces quelques étapes :
     </p>
     <ol>
