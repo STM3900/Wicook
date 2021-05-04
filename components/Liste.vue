@@ -3,7 +3,7 @@
     <template v-if="type == 'ingredient'">
       <ul>
         <li v-for="i in listData" :key="i.nom">
-          <b>{{ i.quantity }} {{ i.unit }}</b> de {{ i.name }}
+          <b>{{ i.quantity }} {{ i.unit }}</b> {{ i.name }}
         </li>
       </ul>
     </template>
