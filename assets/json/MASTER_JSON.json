@@ -1,1 +1,198 @@
-[]
+[
+  {
+    "url": "kfc",
+
+    "recetteInfos": {
+      "nomDeRecette": "KFC maison",
+
+      "author": "Tagpower",
+
+      "infoHeader": {
+        "img": {
+          "src": "https://media4.s-nbcnews.com/j/newscms/2020_09/1543282/chicken-fingers-today-main-200227_c73e99947f638328a263407fb90a9dc8.fit-2000w.jpg",
+
+          "alt": "pouler"
+        },
+
+        "resume": {
+          "preparationTime": 15,
+
+          "cookingTime": 3,
+
+          "difficulty": "Normal",
+
+          "cost": "Abordable"
+        },
+
+        "ingredients": [
+          {
+            "quantity": "Environ 150",
+
+            "unit": "g",
+
+            "name": "de poulet par personne"
+          },
+
+          {
+            "quantity": "1",
+            "unit": "cube",
+            "name": "de bouillon de poulet"
+          },
+          {
+            "quantity": "",
+            "unit": "",
+            "name": "Jus de citron"
+          },
+          {
+            "quantity": "",
+            "unit": "",
+            "name": "Farine"
+          },
+          {
+            "quantity": "",
+            "unit": "",
+            "name": "Sel"
+          },
+          {
+            "quantity": "",
+            "unit": "",
+            "name": "Poivre"
+          },
+
+          {
+            "quantity": "",
+            "unit": "",
+            "name": "Ail"
+          },
+
+          {
+            "quantity": "",
+            "unit": "",
+            "name": "Oignon"
+          },
+          {
+            "quantity": "",
+            "unit": "",
+            "name": "Paprika"
+          },
+          {
+            "quantity": "",
+            "unit": "",
+            "name": "Origan"
+          },
+          {
+            "quantity": "",
+            "unit": "",
+            "name": "Basilic"
+          },
+          {
+            "quantity": "",
+            "unit": "",
+            "name": "Sauge"
+          },
+          {
+            "quantity": "",
+            "unit": "",
+            "name": "Marjolaine"
+          },
+          {
+            "quantity": "1",
+            "unit": "",
+            "name": "œuf"
+          },
+          {
+            "quantity": "½",
+            "unit": "verre",
+            "name": "de lait"
+          },
+          {
+            "quantity": "Au choix :",
+            "unit": "",
+            "name": "Biscottes, chips, Monster Munch, Corn flakes..."
+          }
+        ],
+
+        "tools": [
+          "Casserole",
+          "Saladier",
+          "Bols",
+          "Friteuse ou poêle",
+          "Mixeur"
+        ]
+      },
+
+      "etapes": [
+        {
+          "img": {
+            "src": "",
+            "alt": ""
+          },
+          "text": "Couper le poulet en aiguillettes."
+        },
+        {
+          "img": {
+            "src": "",
+            "alt": ""
+          },
+          "text": "Dissoudre un cube de bouillon dans de l'eau frémissante, ajouter un peu de jus de citron et de sauce soja.\nUne fois le bouillon uniforme, le refroidir pour ne pas cuire le poulet."
+        },
+        {
+          "img": {
+            "src": "",
+            "alt": ""
+          },
+          "text": "Faire mariner le poulet dans ce bouillon pendant plusieurs heures, maximum une journée. Cette étape n'est pas obligatoire, mais elle ajoute beaucoup de saveur et de tendreté au poulet."
+        },
+        {
+          "img": {
+            "src": "",
+            "alt": ""
+          },
+          "text": "Dans une assiette, verser la farine et y incorporer toutes les épices, puis les mélanger."
+        },
+        {
+          "img": {
+            "src": "",
+            "alt": ""
+          },
+          "text": "Rouler chaque morceau de poulet de façon à bien les recouvrir."
+        },
+        {
+          "img": {
+            "src": "",
+            "alt": ""
+          },
+          "text": "Laisser reposer une ou deux heures."
+        },
+        {
+          "img": {
+            "src": "",
+            "alt": ""
+          },
+          "text": "Réduire en miettes (au mixeur de préférence) les ingrédients pour la panure."
+        },
+        {
+          "img": {
+            "src": "",
+            "alt": ""
+          },
+          "text": "Dans un bol, battre un œuf avec un demi-verre de lait."
+        },
+        {
+          "img": {
+            "src": "",
+            "alt": ""
+          },
+          "text": "Tremper chaque morceau de poulet dans l'œuf battu, puis le recouvrir de panure."
+        },
+        {
+          "img": {
+            "src": "",
+            "alt": ""
+          },
+          "text": "Faire frire les morceaux à la friteuse pendant 2 à 3 minutes à 170°, ou à la poêle."
+        }
+      ]
+    }
+  }
+]
