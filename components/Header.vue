@@ -124,13 +124,13 @@ p {
   color: #ec5353;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 1450px) {
   .resume section {
     margin-right: 40px;
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 800px) {
   .resume {
     flex-wrap: wrap;
     gap: 1em 0px;
@@ -140,7 +140,9 @@ p {
   .resume section {
     width: 40%;
   }
+}
 
+@media screen and (max-width: 660px) {
   .resume section p {
     color: gray;
     font-size: 13px;
