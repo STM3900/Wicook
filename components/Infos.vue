@@ -4,10 +4,10 @@
       Temps total :
       {{ infoObject.preparationTime + infoObject.cookingTime }} minutes
     </li>
-    <li>Temps de préparation : {{ infoObject.preparationTime }} minutes</li>
-    <li>Temps de cuisson : {{ infoObject.cookingTime }} minutes</li>
-    <li>Difficulté : {{ infoObject.difficulty }}</li>
-    <li>Prix : {{ infoObject.price }}</li>
+    <li>Temps de préparation&nbsp;: {{ infoObject.preparationTime }} minutes</li>
+    <li>Temps de cuisson&nbsp;: {{ infoObject.cookingTime }} minutes</li>
+    <li>Difficulté&nbsp;: {{ infoObject.difficulty }}</li>
+    <li>Prix&nbsp;: {{ infoObject.price }}</li>
   </ul>
 </template>
 
