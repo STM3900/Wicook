@@ -3,7 +3,7 @@
     <HomeButton
       title="Comment poster une recette ?"
       icon="code"
-      link="/tuto"
+      link="/ajouter"
       :fontSize="16"
     />
     <div class="logo">
