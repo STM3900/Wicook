@@ -102,23 +102,14 @@
       </select>
 
       <h2>Les ingredients</h2>
-      <div
+      <Ingredient
         v-for="(item, i) in json.recetteInfos.infoHeader.ingredients"
         :key="i"
-      >
-        <label :for="'ingredientQuantity' + i">quantité</label>
-        <input
-          type="text"
-          :name="'ingredientQuantity' + i"
-          v-model="item.quantity"
-        />
-
-        <label :for="'ingredientUnit' + i">unité</label>
-        <input type="text" :name="'ingredientUnit' + i" v-model="item.unit" />
-
-        <label :for="'ingredientName' + i">nom de l'ingrédient</label>
-        <input type="text" :name="'ingredientName' + i" v-model="item.name" />
-      </div>
+        :index="i"
+        :quantity="item.quantity"
+        :unit="item.unit"
+        :name="item.name"
+      />
       <button @click="addIngredient()">Ajouter un ingrédient</button>
 
       <ul>
@@ -147,9 +138,10 @@
 
 <script>
 import HomeButton from "../components/HomeButton";
+import Ingredient from "../components/Ingredient";
 
 export default {
-  components: { HomeButton },
+  components: { HomeButton, Ingredient },
   data() {
     return {
       json: {
@@ -166,11 +158,6 @@ export default {
               cost: ""
             },
             ingredients: [
-              {
-                quantity: "",
-                unit: "",
-                name: ""
-              },
               {
                 quantity: "",
                 unit: "",
