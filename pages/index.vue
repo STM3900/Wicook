@@ -58,7 +58,14 @@ export default {
   data() {
     return {
       data: MASTER_JSON,
-      filterValue: ""
+      filterValue: "",
+      testList: [
+        {
+          quantity: "56",
+          unit: "qodjzio",
+          name: "hfuiehz"
+        }
+      ]
     };
   },
   methods: {
@@ -74,6 +81,13 @@ export default {
       }
 
       return temp;
+    },
+    testAdd() {
+      this.testList.push({
+        quantity: "56",
+        unit: "qodjzio",
+        name: "hfuiehz"
+      });
     }
   }
 };

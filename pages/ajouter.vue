@@ -33,104 +33,122 @@
 
     <h1>Formulaire de création</h1>
     <hr />
-    <form>
-      <label for="url">L'url de la page de votre recette</label>
-      <input type="text" name="url" v-model="json.url" />
+    <label for="url">L'url de la page de votre recette</label>
+    <input type="text" id="url" v-model="json.url" />
 
-      <label for="recipeName">Nom de la recette</label>
+    <label for="recipeName">Nom de la recette</label>
+    <input
+      type="text"
+      id="recipeName"
+      v-model="json.recetteInfos.nomDeRecette"
+    />
+
+    <label for="author">L'auteur de la recette</label>
+    <input type="text" id="author" v-model="json.recetteInfos.author" />
+
+    <h2>Pour le header :</h2>
+    <label for="headerImgLink">L'image de votre recette (lien unquement)</label>
+    <input
+      type="text"
+      id="headerImgLink"
+      v-model="json.recetteInfos.infoHeader.img.src"
+    />
+
+    <label for="headerImgAlt">Sa description si l'image ne charge pas</label>
+    <input
+      type="text"
+      id="headerImgAlt"
+      v-model="json.recetteInfos.infoHeader.img.alt"
+    />
+
+    <label for="preparationTime"
+      >Temps de préparation (sans la cuisson, en minutes)</label
+    >
+    <input
+      type="number"
+      id="preparationTime"
+      v-model="json.recetteInfos.infoHeader.resume.preparationTime"
+    />
+
+    <label for="cookingTime">Temps de cuisson (en minutes)</label>
+    <input
+      type="number"
+      id="cookingTime"
+      v-model="json.recetteInfos.infoHeader.resume.cookingTime"
+    />
+
+    <label for="difficulty">La difficulté de votre recette</label>
+    <select
+      id="difficulty"
+      v-model="json.recetteInfos.infoHeader.resume.difficulty"
+    >
+      <option disabled value="">Choisissez</option>
+      <option>Très facile</option>
+      <option>Facile</option>
+      <option>Moyen</option>
+      <option>Difficile</option>
+    </select>
+
+    <label for="cost">Le cout de votre recette</label>
+    <select id="cost" v-model="json.recetteInfos.infoHeader.resume.cost">
+      <option disabled value="">Choisissez</option>
+      <option>Bon marché</option>
+      <option>Abordable</option>
+      <option>Moyen</option>
+      <option>Couteux</option>
+    </select>
+
+    <h2>Les ingredients</h2>
+    <div v-for="(item, i) in ingredients" :key="i">
+      <label :for="'ingredientQuantity' + i">quantité</label>
       <input
         type="text"
-        name="recipeName"
-        v-model="json.recetteInfos.nomDeRecette"
+        :id="'ingredientQuantity' + i"
+        v-model="item.quantity"
       />
 
-      <label for="author">L'auteur de la recette</label>
-      <input type="text" name="author" v-model="json.recetteInfos.author" />
+      <label :for="'ingredientUnit' + i">unité</label>
+      <input type="text" :id="'ingredientUnit' + i" v-model="item.unit" />
 
-      <h2>Pour le header :</h2>
-      <label for="headerImgLink"
-        >L'image de votre recette (lien unquement)</label
-      >
+      <label :for="'ingredientName' + i">nom de l'ingrédient</label>
+      <input type="text" :id="'ingredientName' + i" v-model="item.id" />
+    </div>
+    <button @click="addIngredient()">Ajouter un ingrédient</button>
+
+    <h2>Les ustensiles</h2>
+    <div v-for="(item, j) in tools" :key="j">
+      <label :for="'tool' + j">Ustensile</label>
+      <input type="text" :id="'tool' + j" v-model="item.tool" />
+    </div>
+    <button @click="addTool()">Ajouter un Ustensile</button>
+
+    <h2>Les étapes de la recette</h2>
+    <div v-for="(item, k) in etapes" :key="k">
+      <label :for="'checkbox' + k">L'étape contient-elle une image ?</label>
       <input
-        type="text"
-        name="headerImgLink"
-        v-model="json.recetteInfos.infoHeader.img.src"
+        type="checkbox"
+        :id="'checkbox' + k"
+        v-model="item[0].checked"
+        @click="!item[0].checked ? addStepImg(k) : removeStepImg(k)"
       />
+      <br />
+      <label :for="'etapeText' + k">La description de votre étape</label>
+      <input type="text" :id="'etapeText' + k" v-model="item[0].text" />
 
-      <label for="headerImgAlt">Sa description si l'image ne charge pas</label>
-      <input
-        type="text"
-        name="headerImgAlt"
-        v-model="json.recetteInfos.infoHeader.img.alt"
-      />
+      <template v-if="item[1]">
+        <label :for="'etapeUrl' + k">l'url de l'image</label>
+        <input type="text" :id="'etapeUrl' + k" v-model="item[1].src" />
 
-      <label for="preparationTime"
-        >Temps de préparation (sans la cuisson, en minutes)</label
-      >
-      <input
-        type="number"
-        name="preparationTime"
-        v-model="json.recetteInfos.infoHeader.resume.preparationTime"
-      />
-
-      <label for="cookingTime">Temps de cuisson (en minutes)</label>
-      <input
-        type="number"
-        name="cookingTime"
-        v-model="json.recetteInfos.infoHeader.resume.cookingTime"
-      />
-
-      <label for="difficulty">La difficulté de votre recette</label>
-      <select
-        name="difficulty"
-        v-model="json.recetteInfos.infoHeader.resume.difficulty"
-      >
-        <option disabled value="">Choisissez</option>
-        <option>Très facile</option>
-        <option>Facile</option>
-        <option>Moyen</option>
-        <option>Difficile</option>
-      </select>
-
-      <label for="cost">Le cout de votre recette</label>
-      <select name="cost" v-model="json.recetteInfos.infoHeader.resume.cost">
-        <option disabled value="">Choisissez</option>
-        <option>Bon marché</option>
-        <option>Abordable</option>
-        <option>Moyen</option>
-        <option>Couteux</option>
-      </select>
-
-      <h2>Les ingredients</h2>
-      <Ingredient
-        v-for="(item, i) in json.recetteInfos.infoHeader.ingredients"
-        :key="i"
-        :index="i"
-        :quantity="item.quantity"
-        :unit="item.unit"
-        :name="item.name"
-      />
-      <button @click="addIngredient()">Ajouter un ingrédient</button>
-
-      <ul>
-        <li v-for="(item, i) in tab" :key="i">hey</li>
-      </ul>
-      <button @click="test">add item</button>
-
-      <h2>Les ustensiles</h2>
-      <label for="">nom de l'ustencile</label>
-      <input type="text" />
-
-      <h2>Les étapes de la recette</h2>
-      <label for="">L'image de votre recette (lien unquement)</label>
-      <input type="text" />
-
-      <label for="">Sa description si l'image ne charge pas</label>
-      <input type="text" />
-
-      <label for="">Le texte de votre étape</label>
-      <input type="text" />
-    </form>
+        <label :for="'etapeAlt' + k"
+          >Sa description si l'image ne charge pas</label
+        >
+        <input type="text" :id="'etapeAlt' + k" v-model="item[1].alt" />
+      </template>
+    </div>
+    <button @click="addStep()">Ajouter une étape</button>
+    <hr />
+    <button @click="submitForm()">Submit</button>
+    <br /><br /><br /><br />
     <button @click="show">show json</button>
     <button @click="download(json, 'test')">dowload json</button>
   </div>
@@ -138,10 +156,9 @@
 
 <script>
 import HomeButton from "../components/HomeButton";
-import Ingredient from "../components/Ingredient";
 
 export default {
-  components: { HomeButton, Ingredient },
+  components: { HomeButton },
   data() {
     return {
       json: {
@@ -153,23 +170,25 @@ export default {
             img: { src: "", alt: "" },
             resume: {
               preparationTime: 0,
-              cookingTime: 15,
+              cookingTime: 0,
               difficulty: "",
               cost: ""
             },
-            ingredients: [
-              {
-                quantity: "",
-                unit: "",
-                name: ""
-              }
-            ],
+            ingredients: [],
             tools: []
           },
           etapes: []
         }
       },
-      tab: []
+      ingredients: [
+        {
+          quantity: "",
+          unit: "",
+          name: ""
+        }
+      ],
+      tools: [{ tool: "" }],
+      etapes: [[{ text: "", checked: false }]]
     };
   },
   methods: {
@@ -188,14 +207,67 @@ export default {
       downloadAnchorNode.remove();
     },
     addIngredient() {
-      this.json.recetteInfos.infoHeader.ingredients.push({
+      this.ingredients.push({
         quantity: "",
         unit: "",
         name: ""
       });
     },
-    test() {
-      this.tab.push("test");
+    addTool() {
+      this.tools.push({ tool: "" });
+    },
+    addStep() {
+      this.etapes.push([{ text: "", checked: false }]);
+    },
+    addStepImg(index) {
+      this.etapes[index].push({
+        src: "",
+        alt: ""
+      });
+      console.log(this.etapes);
+      console.log(this.etapes[index]);
+    },
+    removeStepImg(index) {
+      this.etapes[index].pop();
+      console.log("wsh élément tej");
+      console.log(this.etapes);
+      console.log(this.etapes[index]);
+    },
+    submitForm() {
+      console.log("aaaaa");
+      for (let i = 0; i < this.ingredients.length; i++) {
+        this.json.recetteInfos.infoHeader.ingredients.push({
+          quantity: this.ingredients[i].quantity,
+          unit: this.ingredients[i].unit,
+          name: this.ingredients[i].name
+        });
+      }
+
+      for (let i = 0; i < this.tools.length; i++) {
+        this.json.recetteInfos.infoHeader.tools.push(this.tools[i].tool);
+      }
+
+      for (let i = 0; i < this.etapes.length; i++) {
+        if (this.etapes[i][1]) {
+          this.json.recetteInfos.etapes.push({
+            img: {
+              src: this.etapes[i][1].src ? this.etapes[i][1].src : "",
+              alt: this.etapes[i][1].alt ? this.etapes[i][1].alt : ""
+            },
+            text: this.etapes[i][0].text
+          });
+        } else {
+          this.json.recetteInfos.etapes.push({
+            img: {
+              src: "",
+              alt: ""
+            },
+            text: this.etapes[i][0].text
+          });
+        }
+      }
+
+      this.download(this.json, this.json.url);
     }
   }
 };
