@@ -93,7 +93,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .content {
   flex: 1 0 auto;
 }

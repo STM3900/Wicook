@@ -1,7 +1,7 @@
 <template>
   <div>
     <HomeButton title="Accueil" icon="home" link="/" :fontSize="20" />
-    <h1>Comment poster une recette ?</h1>
+    <h1>Poster une recette</h1>
     <hr />
     <p>
       Envie de mettre la main à la pâte ? Rien de plus simple ! Vous pouvez
@@ -9,13 +9,10 @@
     </p>
     <ol>
       <li>
-        Téléchargez le fichier
-        <a href="./model.json" class="link" download>JSON</a>
-        modèle pour la recette
+        Remplissez le formulaire ci-dessous
       </li>
       <li>
-        Remplissez-le en utilisant l'éditeur de texte de votre choix (bloc note,
-        notepad, vscode)
+        Une fois le formulaire complété, un fichier se téléchargera
       </li>
       <li>Envoyez-le moi par message privé sur discord</li>
       <li>
@@ -23,142 +20,235 @@
       </li>
     </ol>
     <p>
-      Attention : le site est en constante évolution, il est possible que la
-      structure du JSON puisse être modifiée au fil des mises à jour.
-    </p>
-    <p>
       Si vous avez la moindre question, n'hésitez pas à me contacter sur discord
-      !
+      ou twitter !
     </p>
 
-    <h1>Formulaire de création</h1>
-    <hr />
-    <label for="url">L'url de la page de votre recette</label>
-    <input type="text" id="url" v-model="json.url" />
-
-    <label for="recipeName">Nom de la recette</label>
-    <input
-      type="text"
-      id="recipeName"
-      v-model="json.recetteInfos.nomDeRecette"
-    />
-
-    <label for="author">L'auteur de la recette</label>
-    <input type="text" id="author" v-model="json.recetteInfos.author" />
-
-    <h2>Pour le header :</h2>
-    <label for="headerImgLink">L'image de votre recette (lien unquement)</label>
-    <input
-      type="text"
-      id="headerImgLink"
-      v-model="json.recetteInfos.infoHeader.img.src"
-    />
-
-    <label for="headerImgAlt">Sa description si l'image ne charge pas</label>
-    <input
-      type="text"
-      id="headerImgAlt"
-      v-model="json.recetteInfos.infoHeader.img.alt"
-    />
-
-    <label for="preparationTime"
-      >Temps de préparation (sans la cuisson, en minutes)</label
-    >
-    <input
-      type="number"
-      id="preparationTime"
-      v-model="json.recetteInfos.infoHeader.resume.preparationTime"
-    />
-
-    <label for="cookingTime">Temps de cuisson (en minutes)</label>
-    <input
-      type="number"
-      id="cookingTime"
-      v-model="json.recetteInfos.infoHeader.resume.cookingTime"
-    />
-
-    <label for="difficulty">La difficulté de votre recette</label>
-    <select
-      id="difficulty"
-      v-model="json.recetteInfos.infoHeader.resume.difficulty"
-    >
-      <option disabled value="">Choisissez</option>
-      <option>Très facile</option>
-      <option>Facile</option>
-      <option>Moyen</option>
-      <option>Difficile</option>
-    </select>
-
-    <label for="cost">Le cout de votre recette</label>
-    <select id="cost" v-model="json.recetteInfos.infoHeader.resume.cost">
-      <option disabled value="">Choisissez</option>
-      <option>Bon marché</option>
-      <option>Abordable</option>
-      <option>Moyen</option>
-      <option>Couteux</option>
-    </select>
-
-    <h2>Les ingredients</h2>
-    <div v-for="(item, i) in ingredients" :key="i">
-      <label :for="'ingredientQuantity' + i">quantité</label>
+    <div v-if="!isSend">
+      <h1>Formulaire d'ajout</h1>
+      <hr />
+      <h2>Informations générales</h2>
+      <label for="url">Url de la page</label>
       <input
         type="text"
-        :id="'ingredientQuantity' + i"
-        v-model="item.quantity"
+        id="url"
+        placeholder="ex : gnocchi"
+        v-model="json.url"
       />
 
-      <label :for="'ingredientUnit' + i">unité</label>
-      <input type="text" :id="'ingredientUnit' + i" v-model="item.unit" />
-
-      <label :for="'ingredientName' + i">nom de l'ingrédient</label>
-      <input type="text" :id="'ingredientName' + i" v-model="item.id" />
-    </div>
-    <button @click="addIngredient()">Ajouter un ingrédient</button>
-
-    <h2>Les ustensiles</h2>
-    <div v-for="(item, j) in tools" :key="j">
-      <label :for="'tool' + j">Ustensile</label>
-      <input type="text" :id="'tool' + j" v-model="item.tool" />
-    </div>
-    <button @click="addTool()">Ajouter un Ustensile</button>
-
-    <h2>Les étapes de la recette</h2>
-    <div v-for="(item, k) in etapes" :key="k">
-      <label :for="'checkbox' + k">L'étape contient-elle une image ?</label>
+      <label for="recipeName">Nom de la recette</label>
       <input
-        type="checkbox"
-        :id="'checkbox' + k"
-        v-model="item[0].checked"
-        @click="!item[0].checked ? addStepImg(k) : removeStepImg(k)"
+        type="text"
+        id="recipeName"
+        placeholder="ex : Gnocchi maison"
+        v-model="json.recetteInfos.nomDeRecette"
       />
-      <br />
-      <label :for="'etapeText' + k">La description de votre étape</label>
-      <input type="text" :id="'etapeText' + k" v-model="item[0].text" />
 
-      <template v-if="item[1]">
-        <label :for="'etapeUrl' + k">l'url de l'image</label>
-        <input type="text" :id="'etapeUrl' + k" v-model="item[1].src" />
+      <label for="author">Son auteur</label>
+      <input
+        type="text"
+        id="author"
+        placeholder="ex : Théo"
+        v-model="json.recetteInfos.author"
+      />
 
-        <label :for="'etapeAlt' + k"
-          >Sa description si l'image ne charge pas</label
-        >
-        <input type="text" :id="'etapeAlt' + k" v-model="item[1].alt" />
-      </template>
+      <h2>Entête</h2>
+      <label for="headerImgLink"
+        >L'image de votre recette (lien uniquement)</label
+      >
+      <input
+        type="text"
+        id="headerImgLink"
+        required
+        placeholder="ex : https://theomigeat.com/gnocchi.jpg"
+        v-model="json.recetteInfos.infoHeader.img.src"
+      />
+
+      <label for="headerImgAlt">Sa description alternative</label>
+      <input
+        type="text"
+        id="headerImgAlt"
+        placeholder="ex : photo de gnocchi"
+        v-model="json.recetteInfos.infoHeader.img.alt"
+      />
+
+      <div class="input-group">
+        <section>
+          <label for="preparationTime">Temps de préparation (en minutes)</label>
+          <input
+            type="number"
+            id="preparationTime"
+            placeholder="ex : 15"
+            v-model="json.recetteInfos.infoHeader.resume.preparationTime"
+          />
+        </section>
+        <section>
+          <label for="cookingTime">Temps de cuisson (en minutes)</label>
+          <input
+            type="number"
+            id="cookingTime"
+            placeholder="ex : 45"
+            v-model="json.recetteInfos.infoHeader.resume.cookingTime"
+          />
+        </section>
+      </div>
+
+      <label for="difficulty">Difficulté : {{ getDifficulty }}</label>
+      <input
+        type="range"
+        class="slider slider-bottom"
+        id="difficulty"
+        min="0"
+        max="3"
+        v-model="difficulty"
+      />
+
+      <label for="cost">Cout : {{ getCost }}</label>
+      <input
+        type="range"
+        class="slider"
+        id="cost"
+        min="0"
+        max="3"
+        v-model="cost"
+      />
+
+      <h2>Ingrédients</h2>
+      <div v-for="(item, i) in ingredients" :key="i" class="ingredient">
+        <div class="title-section">
+          <h3>Ingrédient n°{{ i + 1 }}</h3>
+          <button @click="deleteElement(i, ingredients)" class="delete-button">
+            &times;
+          </button>
+        </div>
+
+        <article>
+          <div class="input-group-ingredient">
+            <section>
+              <label :for="'ingredientQuantity' + i">Quantité</label>
+              <input
+                type="text"
+                :id="'ingredientQuantity' + i"
+                placeholder="ex : 500g"
+                v-model="item.quantity"
+              />
+            </section>
+            <section>
+              <label :for="'ingredientUnit' + i">Unité</label>
+              <input
+                type="text"
+                :id="'ingredientUnit' + i"
+                placeholder="ex : g"
+                v-model="item.unit"
+              />
+            </section>
+            <section>
+              <label :for="'ingredientName' + i">Nom de l'ingrédient</label>
+              <input
+                type="text"
+                :id="'ingredientName' + i"
+                placeholder="ex : de farine"
+                v-model="item.id"
+              />
+            </section>
+          </div>
+
+          <p>
+            Votre ingrédient : <b>{{ item.quantity }}{{ item.unit }}</b>
+            {{ item.id }}
+          </p>
+        </article>
+      </div>
+      <button @click="addIngredient()" class="add-button">
+        <fa :icon="['fas', 'plus']" />
+      </button>
+
+      <h2>Ustensiles</h2>
+      <ul class="tool">
+        <li v-for="(item, j) in tools" :key="j">
+          <input
+            type="text"
+            :placeholder="'ex : Presse-purée'"
+            v-model="item.tool"
+          />
+          <button @click="deleteElement(j, tools)" class="delete-button">
+            &times;
+          </button>
+        </li>
+      </ul>
+      <button @click="addTool()" class="add-button">
+        <fa :icon="['fas', 'plus']" />
+      </button>
+
+      <h2>Étapes</h2>
+      <timeline v-for="(item, k) in etapes" :key="k">
+        <timeline-title bg-color="#FFB39F">
+          <div class="title-section">
+            <h3>Étape {{ k + 1 }}</h3>
+            <button @click="deleteElement(k, etapes)" class="delete-button">
+              &times;
+            </button>
+          </div>
+
+          <div class="checkGroup">
+            <label :for="'checkbox' + k"
+              >L'étape contient-elle une image ?</label
+            >
+            <input
+              type="checkbox"
+              :id="'checkbox' + k"
+              class="checkmark"
+              v-model="item[0].checked"
+              @click="!item[0].checked ? addStepImg(k) : removeStepImg(k)"
+            />
+          </div>
+          <label :for="'etapeText' + k">Description :</label>
+          <textarea
+            :id="'etapeText' + k"
+            placeholder="ex : Épluchez et découpez les patates en cube, puis lavez-les à l'eau froide"
+            v-model="item[0].text"
+          />
+
+          <template v-if="item[1]">
+            <label :for="'etapeUrl' + k">l'url de l'image</label>
+            <input
+              type="text"
+              :id="'etapeUrl' + k"
+              placeholder="ex : https://theomigeat.com/gnocchi.jpg"
+              v-model="item[1].src"
+            />
+
+            <label :for="'etapeAlt' + k">Sa description alternative</label>
+            <input
+              type="text"
+              :id="'etapeAlt' + k"
+              placeholder="ex : photo de gnocchi"
+              v-model="item[1].alt"
+            />
+          </template>
+        </timeline-title>
+      </timeline>
+      <button @click="addStep()" class="add-button-list">
+        <fa :icon="['fas', 'plus']" />
+      </button>
+      <div class="submit-div">
+        <button class="submit-button" @click="submitForm()">
+          Générer ma recette !
+        </button>
+      </div>
     </div>
-    <button @click="addStep()">Ajouter une étape</button>
-    <hr />
-    <button @click="submitForm()">Submit</button>
-    <br /><br /><br /><br />
-    <button @click="show">show json</button>
-    <button @click="download(json, 'test')">dowload json</button>
+    <div v-else class="sended">
+      <h2>Recette envoyée !</h2>
+    </div>
   </div>
 </template>
 
 <script>
 import HomeButton from "../components/HomeButton";
+import { Timeline, TimelineItem, TimelineTitle } from "vue-cute-timeline";
 
 export default {
-  components: { HomeButton },
+  components: { HomeButton, Timeline, TimelineItem, TimelineTitle },
   data() {
     return {
       json: {
@@ -169,8 +259,8 @@ export default {
           infoHeader: {
             img: { src: "", alt: "" },
             resume: {
-              preparationTime: 0,
-              cookingTime: 0,
+              preparationTime: null,
+              cookingTime: null,
               difficulty: "",
               cost: ""
             },
@@ -180,6 +270,10 @@ export default {
           etapes: []
         }
       },
+      difficulty: 0,
+      difficultyTab: ["Très facile", "Facile", "Moyen", "Difficile"],
+      cost: 0,
+      costTab: ["Bon marché", "Abordable", "Moyen", "Couteux"],
       ingredients: [
         {
           quantity: "",
@@ -188,8 +282,17 @@ export default {
         }
       ],
       tools: [{ tool: "" }],
-      etapes: [[{ text: "", checked: false }]]
+      etapes: [[{ text: "", checked: false }]],
+      isSend: false
     };
+  },
+  computed: {
+    getDifficulty: function() {
+      return this.difficultyTab[this.difficulty];
+    },
+    getCost: function() {
+      return this.costTab[this.cost];
+    }
   },
   methods: {
     show() {
@@ -234,7 +337,9 @@ export default {
       console.log(this.etapes[index]);
     },
     submitForm() {
-      console.log("aaaaa");
+      this.json.recetteInfos.infoHeader.resume.difficulty = this.getDifficulty;
+      this.json.recetteInfos.infoHeader.resume.cost = this.getCost;
+
       for (let i = 0; i < this.ingredients.length; i++) {
         this.json.recetteInfos.infoHeader.ingredients.push({
           quantity: this.ingredients[i].quantity,
@@ -268,6 +373,10 @@ export default {
       }
 
       this.download(this.json, this.json.url);
+      this.isSend = true;
+    },
+    deleteElement(index, array) {
+      array.splice(index, 1);
     }
   }
 };
@@ -279,5 +388,286 @@ h1 {
   font-weight: 300;
   margin-left: -4px;
   margin-bottom: 0;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  margin-bottom: 0px;
+}
+
+input {
+  border-radius: 2px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  /* haut | droit | bas | gauche */
+  padding: 10px 20px 10px 15px;
+
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: solid rgb(87, 87, 87) 1px;
+  font-family: "Open Sans", sans-serif;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border: solid black 1px;
+}
+
+.tool input {
+  width: 50%;
+  /* haut | droit | bas | gauche */
+  padding: 0px 2px 4px 2px;
+  border-radius: 0;
+  margin-right: 10px;
+
+  border: none;
+  border-bottom: solid rgb(87, 87, 87) 1px;
+}
+
+.tool button {
+  transform: translateY(10px);
+}
+
+.tool button:hover {
+  transform: translateY(10px) rotate(-20deg);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: center;
+}
+
+.input-group section {
+  width: 45%;
+}
+
+.input-group-ingredient {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: center;
+}
+
+.input-group-ingredient section {
+  width: 20%;
+}
+
+.input-group-ingredient section:last-child {
+  width: 50%;
+}
+
+.ingredient {
+  margin-bottom: 20px;
+}
+
+.ingredient h3 {
+  margin-top: 0;
+  font-weight: normal;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.ingredient article {
+  margin-left: 20px;
+}
+
+.ingredient p {
+  margin: 0;
+}
+
+.timeline {
+  margin-right: 0;
+  margin-top: 0;
+}
+
+.timeline-title {
+  display: block;
+  transform: translateY(-4px);
+  z-index: 1000;
+}
+
+.timeline-title:hover {
+  cursor: auto;
+}
+
+.checkGroup {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.slider {
+  margin-top: 15px;
+
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  background: #ececec;
+  outline: none;
+  opacity: 0.8;
+  -webkit-transition: 0.3s;
+  transition: opacity 0.3s;
+}
+
+.slider-bottom {
+  margin-bottom: 30px;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #ec5353;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #ec5353;
+  cursor: pointer;
+}
+
+.slider:focus {
+  border: none;
+}
+
+textarea {
+  width: 100%;
+  min-height: 200px;
+  /* haut | droit | bas | gauche */
+  padding: 10px;
+
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: solid rgb(87, 87, 87) 1px;
+  font-family: "Open Sans", sans-serif;
+  transition: 0.3s;
+  font-size: 14px;
+  resize: vertical;
+  border-radius: 2px;
+}
+
+textarea:focus {
+  outline: none;
+  border: solid black 1px;
+}
+
+.title-section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: center;
+}
+
+.delete-button {
+  font-size: 30px;
+  padding: 0;
+  border-radius: 50px;
+  border: none;
+  background: none;
+  color: #ec5353;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.delete-button:hover {
+  cursor: pointer;
+  transform: rotate(-20deg);
+  opacity: 1;
+}
+
+.add-button {
+  font-size: 18px;
+  padding: 0;
+  border-radius: 50px;
+  border: none;
+  background: none;
+  color: #ec5353;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.add-button:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.add-button-list {
+  font-size: 22px;
+  padding: 0;
+  border-radius: 50px;
+  border: none;
+  margin-left: 11px;
+  background: none;
+  color: #ec5353;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.add-button-list:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.submit-div {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.submit-button {
+  border: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  padding: 15px;
+  background: #ec5353;
+  color: white;
+  transition: 0.3s;
+}
+
+.submit-button:hover {
+  cursor: pointer;
+  transform: rotate(2deg);
+}
+
+.submit-button:active {
+  transform: scale(0.98);
+}
+
+.sended {
+  margin-top: 100px;
+  text-align: center;
 }
 </style>

@@ -10,7 +10,7 @@
             :alt="data.img.alt"
           />
         </div>
-        <p>{{ data.text }}</p></timeline-title
+        <p style="white-space: pre-line;">{{ data.text }}</p></timeline-title
       >
     </timeline>
   </div>
