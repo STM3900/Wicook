@@ -155,8 +155,8 @@
           </div>
 
           <p>
-            Votre ingrédient : <b>{{ item.quantity }}{{ item.name }}</b>
-            {{ item.id }}
+            Votre ingrédient : <b>{{ item.quantity }}{{ item.unit }}</b>
+            {{ item.name }}
           </p>
         </article>
       </div>
@@ -694,6 +694,10 @@ textarea:focus {
 
   .ingredient article {
     margin-left: 0px;
+  }
+
+  .tool input {
+    width: 90%;
   }
 }
 
