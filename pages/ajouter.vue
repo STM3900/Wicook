@@ -233,6 +233,18 @@
       <button @click="addStep()" class="add-button-list">
         <fa :icon="['fas', 'plus']" />
       </button>
+      <div class="source">
+        <label :for="'source'"
+          >Source de la recette (laissez vide si vous en êtes l'auteur)</label
+        >
+        <input
+          type="text"
+          id="source"
+          placeholder="ex : https://www.marmiton.org/recettes/recette_gateau-au-yaourt_12719.aspx"
+          v-model="json.recetteInfos.source"
+        />
+      </div>
+
       <div class="submit-div">
         <button class="submit-button" @click="submitForm()">
           Générer ma recette !
@@ -258,6 +270,7 @@ export default {
         recetteInfos: {
           nomDeRecette: "",
           author: "",
+          source: "",
           infoHeader: {
             img: { src: "", alt: "" },
             resume: {
@@ -651,6 +664,11 @@ textarea:focus {
 .add-button-list:hover {
   cursor: pointer;
   opacity: 1;
+}
+
+.source {
+  width: 100%;
+  margin-top: 20px;
 }
 
 .submit-div {

@@ -1,7 +1,11 @@
 <template>
   <div>
     <h1>{{ title }}</h1>
-    <p v-if="author">Par : {{ author }}</p>
+    <p v-if="isOriginal">Par : {{ author }}</p>
+    <div v-else>
+      <p>Partagé par {{ author }}</p>
+      <a :href="source" class="link">Source</a>
+    </div>
     <hr />
     <div v-if="info.resume" class="resume">
       <section v-if="info.resume.preparationTime">
@@ -49,6 +53,14 @@ export default {
       default: null
     },
     author: {
+      type: String,
+      default: null
+    },
+    isOriginal: {
+      type: Boolean,
+      default: null
+    },
+    source: {
       type: String,
       default: null
     },
