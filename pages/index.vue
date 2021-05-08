@@ -1,8 +1,8 @@
 <template>
   <div>
     <HomeButton
-      title="Comment poster une recette ?"
-      icon="code"
+      title="Ajouter une recette"
+      icon="plus"
       link="/ajouter"
       :fontSize="16"
     />

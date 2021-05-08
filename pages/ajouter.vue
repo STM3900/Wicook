@@ -148,13 +148,14 @@
                 type="text"
                 :id="'ingredientName' + i"
                 placeholder="ex : de farine"
-                v-model="item.id"
+                v-on:keyup.enter="addIngredient()"
+                v-model="item.name"
               />
             </section>
           </div>
 
           <p>
-            Votre ingrédient : <b>{{ item.quantity }}{{ item.unit }}</b>
+            Votre ingrédient : <b>{{ item.quantity }}{{ item.name }}</b>
             {{ item.id }}
           </p>
         </article>
@@ -169,6 +170,7 @@
           <input
             type="text"
             :placeholder="'ex : Presse-purée'"
+            v-on:keyup.enter="addTool()"
             v-model="item.tool"
           />
           <button @click="deleteElement(j, tools)" class="delete-button">
@@ -315,9 +317,19 @@ export default {
         unit: "",
         name: ""
       });
+      setTimeout(() => {
+        const selector = document.querySelectorAll(
+          ".input-group-ingredient input"
+        );
+        selector[selector.length - 3].focus();
+      }, 10);
     },
     addTool() {
       this.tools.push({ tool: "" });
+      setTimeout(() => {
+        const selector = document.querySelectorAll(".tool li input");
+        selector[selector.length - 1].focus();
+      }, 10);
     },
     addStep() {
       this.etapes.push([{ text: "", checked: false }]);
@@ -669,5 +681,37 @@ textarea:focus {
 .sended {
   margin-top: 100px;
   text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  .input-group {
+    flex-direction: column;
+  }
+
+  .input-group section {
+    width: 100%;
+  }
+
+  .ingredient article {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .input-group-ingredient {
+    flex-wrap: wrap;
+  }
+
+  .input-group-ingredient section {
+    width: 45%;
+  }
+
+  .input-group-ingredient section:last-child {
+    width: 100%;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
 }
 </style>
