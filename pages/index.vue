@@ -41,9 +41,8 @@
     </article>
     <article v-else class="no-recipe">
       <p>
-        Pas de recettes ! Ajoutez en avec le
-        <NuxtLink to="/tuto" class="link">json</NuxtLink>
-        dédié !
+        Pas de recettes ! Ajoutez en
+        <NuxtLink to="/ajouter" class="link">ici</NuxtLink> !
       </p>
     </article>
   </div>
