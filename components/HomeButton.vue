@@ -53,7 +53,7 @@ div:active {
   div {
     padding-left: 15px;
     width: 25px;
-    height: 24px;
+    height: 23px;
     overflow: hidden;
     font-size: 20px !important;
   }

@@ -338,12 +338,12 @@
     }
   },
   {
-    "url": "Cakosomon",
+    "url": "cakosomon",
     "recetteInfos": {
       "nomDeRecette": "Cake au saumon",
       "author": "Agapouet",
       "source": "",
-      "numberOfPerson": "",
+      "numberOfPerson": "environ 4",
       "infoHeader": {
         "img": {
           "src": "http://www.foodforlove.fr/wp-content/uploads/2012/06/cake-aux-2-poires-et-roquefort.jpg",
