@@ -52,6 +52,14 @@
         v-model="json.recetteInfos.author"
       />
 
+      <label for="author">Pour combien de personnes ?</label>
+      <input
+        type="number"
+        id="author"
+        placeholder="ex : 4"
+        v-model="json.recetteInfos.numberOfPerson"
+      />
+
       <h2>Entête</h2>
       <label for="headerImgLink"
         >L'image de votre recette (lien uniquement)</label
@@ -271,6 +279,7 @@ export default {
           nomDeRecette: "",
           author: "",
           source: "",
+          numberOfPerson: "",
           infoHeader: {
             img: { src: "", alt: "" },
             resume: {
@@ -716,6 +725,12 @@ textarea:focus {
 
   .tool input {
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .tool input {
+    width: 80%;
   }
 }
 

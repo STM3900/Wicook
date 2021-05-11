@@ -6,6 +6,9 @@
       <p>Partagé par {{ author }}</p>
       <a :href="source" class="link">Source</a>
     </div>
+    <p v-if="numberOfPerson" :id="isOriginal ? '' : 'margin'">
+      Pour : <b>{{ numberOfPerson }}</b> personne(s)
+    </p>
     <hr />
     <div v-if="info.resume" class="resume">
       <section v-if="info.resume.preparationTime">
@@ -54,6 +57,10 @@ export default {
     },
     author: {
       type: String,
+      default: null
+    },
+    numberOfPerson: {
+      type: Number,
       default: null
     },
     isOriginal: {
@@ -134,6 +141,10 @@ p {
 .list div h3 {
   font-size: 1.5rem;
   color: #ec5353;
+}
+
+#margin {
+  margin-top: 10px;
 }
 
 @media screen and (max-width: 1450px) {

@@ -7,6 +7,7 @@
       :info="data.infoHeader"
       :isOriginal="isOriginal"
       :source="data.source"
+      :numberOfPerson="data.numberOfPerson"
     />
     <hr />
     <p class="info">

@@ -5,6 +5,7 @@
       "nomDeRecette": "KFC maison",
       "author": "Tagpower",
       "source": "",
+      "numberOfPerson": 2,
       "infoHeader": {
         "img": {
           "src": "https://media4.s-nbcnews.com/j/newscms/2020_09/1543282/chicken-fingers-today-main-200227_c73e99947f638328a263407fb90a9dc8.fit-2000w.jpg",
@@ -13,7 +14,7 @@
         "resume": {
           "preparationTime": 15,
           "cookingTime": 3,
-          "difficulty": "Normal",
+          "difficulty": "Facile",
           "cost": "Abordable"
         },
         "ingredients": [
@@ -185,7 +186,8 @@
     "recetteInfos": {
       "nomDeRecette": "Arancini sicilienne",
       "author": "Enzo",
-      "source": "",
+      "source": "dd",
+      "numberOfPerson": 1,
       "infoHeader": {
         "img": {
           "src": "https://www.atelierdeschefs.com/media/recette-e28601-arancini-a-la-mozzarella-et-aux-tomates-sechees.jpg",
@@ -208,7 +210,7 @@
           { "quantity": "", "unit": "", "name": "Farine" },
           { "quantity": "pas mal", "unit": "", "name": "Chapelure" }
         ],
-        "tools": [""]
+        "tools": []
       },
       "etapes": [
         {
