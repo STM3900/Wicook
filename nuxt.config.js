@@ -63,7 +63,9 @@ export default {
   generate: {
 		routes: [
       '/kfc',
-      '/arancini'
+      '/arancini',
+      '/gratin_de_raviole',
+      '/cakosomon'
 		]
 	},
 
