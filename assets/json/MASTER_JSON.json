@@ -179,5 +179,52 @@
         }
       ]
     }
+  },
+  {
+    "url": "arancini",
+    "recetteInfos": {
+      "nomDeRecette": "Arancini sicilienne",
+      "author": "Enzo",
+      "source": "",
+      "infoHeader": {
+        "img": {
+          "src": "https://www.atelierdeschefs.com/media/recette-e28601-arancini-a-la-mozzarella-et-aux-tomates-sechees.jpg",
+          "alt": "photo d'arancini"
+        },
+        "resume": {
+          "preparationTime": "30",
+          "cookingTime": "30",
+          "difficulty": "Moyen",
+          "cost": "Abordable"
+        },
+        "ingredients": [
+          { "quantity": "300", "unit": "g", "name": "Riz arborio" },
+          { "quantity": "40", "unit": "g", "name": "Viande hachés" },
+          { "quantity": "40", "unit": "g", "name": "Petit pois" },
+          { "quantity": "60", "unit": "g", "name": "Mozzarella" },
+          { "quantity": "1", "unit": "", "name": "Oeuf" },
+          { "quantity": "", "unit": "", "name": "Sel" },
+          { "quantity": "", "unit": "", "name": "Huile" },
+          { "quantity": "", "unit": "", "name": "Farine" },
+          { "quantity": "pas mal", "unit": "", "name": "Chapelure" }
+        ],
+        "tools": [""]
+      },
+      "etapes": [
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Coupez en dés la mozarella, et la viande hachés en petit morceaux, puis metteez les dans un bol avec les petits pois, mélangez bien le tout"
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Façonez le riz en petites sphères, et faites dans chacune d'elle une grotte, puis tapisez les bors intérieur de mozzarella, et remplisez de viandes hachés, de riz, et petit poids"
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Passez vos sphères dans la farines avec l'oeuf battu, du sel et ensuite dans la chapelure, puis faitez frire le tout dans l'huile"
+        },
+        { "img": { "src": "", "alt": "" }, "text": "Egoutez et servez" }
+      ]
+    }
   }
 ]
