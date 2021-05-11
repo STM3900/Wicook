@@ -5,7 +5,7 @@
       "nomDeRecette": "KFC maison",
       "author": "Tagpower",
       "source": "",
-      "numberOfPerson": 2,
+      "numberOfPerson": "1",
       "infoHeader": {
         "img": {
           "src": "https://media4.s-nbcnews.com/j/newscms/2020_09/1543282/chicken-fingers-today-main-200227_c73e99947f638328a263407fb90a9dc8.fit-2000w.jpg",
@@ -187,7 +187,7 @@
       "nomDeRecette": "Arancini sicilienne",
       "author": "Enzo",
       "source": "",
-      "numberOfPerson": 1,
+      "numberOfPerson": "toute la famille",
       "infoHeader": {
         "img": {
           "src": "https://www.atelierdeschefs.com/media/recette-e28601-arancini-a-la-mozzarella-et-aux-tomates-sechees.jpg",
@@ -226,6 +226,183 @@
           "text": "Passez vos sphères dans la farines avec l'oeuf battu, du sel et ensuite dans la chapelure, puis faitez frire le tout dans l'huile"
         },
         { "img": { "src": "", "alt": "" }, "text": "Egoutez et servez" }
+      ]
+    }
+  },
+  {
+    "url": "Gratin de Raviole",
+    "recetteInfos": {
+      "nomDeRecette": "Gratin de ravioles au fromage",
+      "author": "Jeanne",
+      "source": "",
+      "numberOfPerson": "2 à 4",
+      "infoHeader": {
+        "img": {
+          "src": "https://www.picard.fr/dw/image/v2/AAHV_PRD/on/demandware.static/-/Sites-catalog-picard/default/dw72b9e3e8/produits/plats-cuisines/000000000000081714_E1.jpg?sw=672&sh=392",
+          "alt": "gratin de ravioles fondant"
+        },
+        "resume": {
+          "preparationTime": "25",
+          "cookingTime": "15",
+          "difficulty": "Facile",
+          "cost": "Abordable"
+        },
+        "ingredients": [
+          {
+            "quantity": "6 à 8 ",
+            "unit": "plaques (500 grammes) ",
+            "name": "de ravioles au basilic, et de ravioles chèvre ou comté"
+          },
+          {
+            "quantity": "un demi (ou entier selon le gout)",
+            "unit": "",
+            "name": "oignon jaune"
+          },
+          { "quantity": "une", "unit": "", "name": "échalote" },
+          {
+            "quantity": "environ 30 ",
+            "unit": "grammes",
+            "name": "d'olives noires fraiches et/ou d'olives vertes"
+          },
+          {
+            "quantity": "un sachet ",
+            "unit": "",
+            "name": "de mozzarella de cuisson (sous vide)"
+          },
+          { "quantity": "une grande", "unit": "", "name": "buche de chèvre" },
+          {
+            "quantity": "une",
+            "unit": "",
+            "name": "conserve ou carton de tomates pelée/tomacouli ou trois à quatre tomates"
+          },
+          {
+            "quantity": "une barquette ",
+            "unit": "",
+            "name": "de champignons brun ou blanc (facultatif)"
+          },
+          { "quantity": "", "unit": "", "name": "du basilic (facultatif)" }
+        ],
+        "tools": [
+          "une grande casserole",
+          "un four",
+          "une autre casserole ou une poêle haute",
+          "un plat pyrex",
+          "une araignée ou une spatule à trou",
+          "une planche à découper",
+          "des couteaux de cuisine"
+        ]
+      },
+      "etapes": [
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Faite bouillir l'eau dans une casserole et préchauffez le four à 180/200 degré celsius. "
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Coupez un oignon jaune finement, ainsi que des olives noires ou vertes fraiches, et de l'échalote ou de l'ail selon vos gouts. Les champignons et le basilic font aussi de bons ingrédients."
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Mixez vos tomates, ou utilisez du concentré, des tomates pelées ou du tomacouli. Vous pouvez aussi acheter une sauce tomates déjà toute faite (ce qui annulerait le besoin des ingrédients la composant)."
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Dans une poêle haute ou une casserole avec de l'huile d'olive, faite revenir vos oignons, échalotes/ail et champignons, puis verser votre sauce tomate et mélangez. Ajoutez vers la fin vos olives. "
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Pendant que la sauce tomate chauffe à feu doux, coupez le fromage de chèvre ainsi que la mozzarella sur un planche. "
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Tapissez le fond du plat de sauce tomate"
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Plongez une à deux plaques de ravioles dans l'eau bouillante jusqu'à ce qu'elles remontent à la surface, égouttez les légèrement et placez les dans le plat. répétez l'opération jusqu'à avoir deux couches ou une seule qui remplit l'étage du plat. "
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Ensuite ajoutez un peu de sauce tomates, quelques morceaux de chèvre coupés, et répétez l'opération sur tous les étages, entre ravioles, sauce et fromage. "
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "sur le dernier étage, ne mettez pas de fromage de chèvre, à la place ajouter seulement de la sauce et de la mozzarella de cuisson. "
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Placez le plat au four et laissez cuir durant 15 à 20 minutes. Surveillez de temps à autre au cas où ça n'a pas besoin d'autant de cuisson. "
+        },
+        { "img": { "src": "", "alt": "" }, "text": "DEGUSTEZ VOS MORTS PUTAIN" }
+      ]
+    }
+  },
+  {
+    "url": "Cakosomon",
+    "recetteInfos": {
+      "nomDeRecette": "Cake au saumon",
+      "author": "Agapouet",
+      "source": "",
+      "numberOfPerson": "",
+      "infoHeader": {
+        "img": {
+          "src": "http://www.foodforlove.fr/wp-content/uploads/2012/06/cake-aux-2-poires-et-roquefort.jpg",
+          "alt": "photo de cake au saumon oui c'est vrai"
+        },
+        "resume": {
+          "preparationTime": "10",
+          "cookingTime": "45",
+          "difficulty": "Facile",
+          "cost": "Moyen"
+        },
+        "ingredients": [
+          { "quantity": "3", "unit": "", "name": "oeufs" },
+          { "quantity": "150", "unit": "g", "name": "de farine" },
+          { "quantity": "1", "unit": " sachet de ", "name": "levure chimique" },
+          { "quantity": "5", "unit": "cl", "name": "d'huile d'olive" },
+          { "quantity": "125", "unit": "mg", "name": " de lait" },
+          { "quantity": "150", "unit": "g", "name": "de gruyère râpé" },
+          { "quantity": "200", "unit": "g", "name": "de saumon/truite" },
+          { "quantity": "de", "unit": " la", "name": "ciboulette" },
+          { "quantity": "", "unit": "", "name": "sel et poivre" }
+        ],
+        "tools": [
+          "Moule à cake",
+          "Saladier",
+          "Planche à découper",
+          "Couteau",
+          "Plein d'amour"
+        ]
+      },
+      "etapes": [
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Préchauffez tout d'abord votre four à 180°C (th.6).\n"
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Commencez par mettre les œufs, l'huile d'olive, le lait, le sel, le poivre et la ciboulette préalablement découpée dans un saladier, et battez."
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Mélangez la levure chimique et la farine dans un récipient à part avant d'ajouter l'ensemble, ainsi que le gruyère râpé, dans le saladier. Battez à nouveau. "
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Découpez le saumon en morceaux de la taille de votre choix et introduisez les dans le mélange."
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Graissez et farinez votre moule avant de versez la préparation dans celui ci. Puis enfournez pour 45 minutes de cuisson."
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Piquez de temps en temps le cake avec un couteau, quand la lame ressort suffisamment sèche, c'est prêt ! \nLaissez le refroidir avant de le démouler pour éviter qu'il se brise. \n"
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Culpabilisez sur le fait de manger des produits d'origine vivante (pauvre ciboulette) et essayez de vous rassurer en vous disant que vous leur avez donné une belle apparence dans la mort :D Bon appétit !"
+        }
       ]
     }
   }

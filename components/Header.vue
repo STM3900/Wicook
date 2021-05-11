@@ -7,7 +7,7 @@
       <a :href="source" class="link">Source</a>
     </div>
     <p v-if="numberOfPerson" :id="isOriginal ? '' : 'margin'">
-      Pour : <b>{{ numberOfPerson }}</b> personne(s)
+      Pour : <b>{{ numberOfPerson }}</b> {{ getPerson }}
     </p>
     <hr />
     <div v-if="info.resume" class="resume">
@@ -60,7 +60,7 @@ export default {
       default: null
     },
     numberOfPerson: {
-      type: Number,
+      type: String,
       default: null
     },
     isOriginal: {
@@ -74,6 +74,22 @@ export default {
     info: {
       type: Object,
       default: null
+    }
+  },
+  computed: {
+    getPerson() {
+      const numbers = this.numberOfPerson.match(/\d+/g);
+      let string = "personne";
+      if (numbers) {
+        for (let i = 0; i < numbers.length; i++) {
+          if (numbers[i] > 1) {
+            string = "personnes";
+          }
+        }
+      } else {
+        string = "";
+      }
+      return string;
     }
   }
 };

@@ -54,7 +54,7 @@
 
       <label for="author">Pour combien de personnes ?</label>
       <input
-        type="number"
+        type="text"
         id="author"
         placeholder="ex : 4"
         v-model="json.recetteInfos.numberOfPerson"
@@ -133,6 +133,16 @@
         <article>
           <div class="input-group-ingredient">
             <section>
+              <label :for="'ingredientName' + i">Nom de l'ingrédient</label>
+              <input
+                type="text"
+                :id="'ingredientName' + i"
+                placeholder="ex : de farine"
+                v-on:keyup.enter="addIngredient()"
+                v-model="item.name"
+              />
+            </section>
+            <section>
               <label :for="'ingredientQuantity' + i">Quantité</label>
               <input
                 type="text"
@@ -148,16 +158,6 @@
                 :id="'ingredientUnit' + i"
                 placeholder="ex : g"
                 v-model="item.unit"
-              />
-            </section>
-            <section>
-              <label :for="'ingredientName' + i">Nom de l'ingrédient</label>
-              <input
-                type="text"
-                :id="'ingredientName' + i"
-                placeholder="ex : de farine"
-                v-on:keyup.enter="addIngredient()"
-                v-model="item.name"
               />
             </section>
           </div>
@@ -505,7 +505,7 @@ input:focus {
   width: 20%;
 }
 
-.input-group-ingredient section:last-child {
+.input-group-ingredient section:first-child {
   width: 50%;
 }
 
@@ -743,7 +743,7 @@ textarea:focus {
     width: 45%;
   }
 
-  .input-group-ingredient section:last-child {
+  .input-group-ingredient section:first-child {
     width: 100%;
   }
 
