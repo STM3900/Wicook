@@ -65,7 +65,8 @@ export default {
       '/kfc',
       '/arancini',
       '/gratin_de_raviole',
-      '/cakosomon'
+      '/cakosomon',
+      '/omelettetomatefromage'
 		]
 	},
 
