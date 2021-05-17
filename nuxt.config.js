@@ -66,7 +66,8 @@ export default {
       '/arancini',
       '/gratin_de_raviole',
       '/cakosomon',
-      '/omelettetomatefromage'
+      '/omelettetomatefromage',
+      '/gratindepates'
 		]
 	},
 
