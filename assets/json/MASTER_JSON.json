@@ -454,5 +454,73 @@
         }
       ]
     }
+  },
+  {
+    "url": "gratindepates",
+    "recetteInfos": {
+      "nomDeRecette": "Gratin de pâtes",
+      "author": "Santeripe",
+      "source": "",
+      "numberOfPerson": "4",
+      "infoHeader": {
+        "img": {
+          "src": "https://lh3.googleusercontent.com/pw/ACtC-3cjjJ6P6-0YmR_BLLjEASAtPINvyFVZlMkDBEFpHE7vtexyuwRxfRa_I9Q5f-h411laVoBEQ_vnYBV9hbX8bw-ZX6mKok9JDOW880dQ4rlkjldDi74YJPg-12y3to_2gQtnst_4m3pRkcSkeYAvwLCV9g=w727-h969-no?authuser=0",
+          "alt": "Photo de gratin de pâtes"
+        },
+        "resume": {
+          "preparationTime": "15",
+          "cookingTime": "15",
+          "difficulty": "Très facile",
+          "cost": "Bon marché"
+        },
+        "ingredients": [
+          {
+            "quantity": "300",
+            "unit": "g",
+            "name": "de pâtes (type coquillettes)"
+          },
+          { "quantity": "40", "unit": "g", "name": "de farine" },
+          { "quantity": "500", "unit": "ml", "name": "de lait" },
+          {
+            "quantity": "30",
+            "unit": "g",
+            "name": "de beurre/d'huile (si huile, réduire un peu)"
+          },
+          { "quantity": "", "unit": "", "name": "du sel, du poivre" },
+          {
+            "quantity": "",
+            "unit": "",
+            "name": "du fromage râpé/de la chapelure"
+          }
+        ],
+        "tools": ["2 casseroles", "1 fouet", "1 plat à gratin", "1 passoire"]
+      },
+      "etapes": [
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Faites cuire les pâtes dans de l'eau bouillante salée durant un temps légèrement inférieur au temps de cuisson indiqué sur le paquet."
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Pendant ce temps, préparez la béchamel : faire chauffer le beurre/l'huile dans une autre casserole ; une fois chaud, y ajouter la farine et fouetter quelques minutes."
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Retirez brièvement la casserole du feu pour ajouter le lait : cela réduit les risques pour le lait d'accrocher au fond de la casserole. Fouettez immédiatement et à feu vif jusqu'à ce que la béchamel devienne plus épaisse, cela peu prendre plusieurs minutes."
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Salez, poivrez et aromatisez la béchamel à votre goût (noix de muscade, ail, oignon...). Vous pouvez même y ajouter de petits légumes (type oignon nouveau coupé finement)."
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Une fois les pâtes cuites, les égoutter et les mettre dans le plat à gratin. Y ajouter la béchamel et bien mélanger le tout afin d'obtenir une consistance homogène. Recouvrir de fromage râpé ou de chapelure."
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Enfin, enfournez pendant environ 15 min dans un four préchauffé à 250 degrés. Ce mode de cuisson s'adresse aux gens pressés et le but est juste de faire gratiner le dessus ; mais vous pouvez aussi faire cuire moins fort et plus longtemps. Bien évidemment, chaque four est différent : à vous de surveiller !"
+        }
+      ]
+    }
   }
 ]
