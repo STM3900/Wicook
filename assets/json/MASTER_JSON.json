@@ -619,5 +619,85 @@
         }
       ]
     }
+  },
+  {
+    "url": "pancakepommes",
+    "recetteInfos": {
+      "nomDeRecette": "Pancakes aux pommes",
+      "author": "Agapouet",
+      "source": "",
+      "numberOfPerson": "2-4",
+      "infoHeader": {
+        "img": {
+          "src": "https://cdn.pixabay.com/photo/2020/02/12/09/34/pancakes-4842125_1280.jpg",
+          "alt": "photo de pancakes aux pommes"
+        },
+        "resume": {
+          "preparationTime": "15",
+          "cookingTime": "15",
+          "difficulty": "Facile",
+          "cost": "Abordable"
+        },
+        "ingredients": [
+          { "quantity": "4", "unit": "", "name": "pommes" },
+          { "quantity": "4 ", "unit": "tasses", "name": "de farine" },
+          { "quantity": "2", "unit": " tasses", "name": "de flocons d'avoine" },
+          { "quantity": "4", "unit": "", "name": "oeufs" },
+          { "quantity": "6", "unit": " tasses", "name": "de lait" },
+          { "quantity": "1", "unit": " tasse", "name": "de beurre fondu" },
+          { "quantity": "2", "unit": " cuillères à café", "name": "de sel" },
+          {
+            "quantity": "2",
+            "unit": " cuillières à café",
+            "name": "de cannelle"
+          }
+        ],
+        "tools": [
+          "des TASSES de même contenance",
+          "deux saladiers/récipients",
+          "une petite poêle",
+          "un fouet",
+          "des cuillières à café"
+        ]
+      },
+      "etapes": [
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Mélangez dans un premier saladier : la farine, les flocons d'avoine, le sel et la cannelle."
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Râpez 4 pommes pour en faire des \"copeaux\". Réservez les dans un récipient (pas le saladier) à part"
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Prenez votre second saladier et ajoutez-y les oeufs. "
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Ajoutez-y ensuite le lait, et mélangez avant d'ajouter les pommes râpées. "
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Finissez avec le beurre fondu et mélangez le tout."
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Ajoutez le contenu du premier saladier dans le second (ou inversement selon votre préférence) et mélangez bien."
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Faites chauffer votre poêle et cuisez les pancake un par un. Idéalement, utilisez une poêle de petit diamètre pour avoir des pancakes épais. \n"
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Retournez chacun de vos pancakes peu après que la partie qui ne cuit pas devienne à peine \"sèche\". \nFaites vous confiance, il faudra peut-être un peu de temps pour que vous trouviez votre bon rythme de cuisson."
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Servez tièdes, et ajouter à votre guise sirop d’érable, glace à la vanille, sirop d'agave, ou ce que vous souhaitez ! \nBon appétit ! "
+        }
+      ]
+    }
   }
 ]

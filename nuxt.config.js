@@ -68,7 +68,8 @@ export default {
       '/cakosomon',
       '/omelettetomatefromage',
       '/gratindepates',
-      '/risottovegetarien'
+      '/risottovegetarien',
+      '/pancakepommes'
 		]
 	},
 
