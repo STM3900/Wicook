@@ -522,5 +522,102 @@
         }
       ]
     }
+  },
+  {
+    "url": "risottovegetarien",
+    "recetteInfos": {
+      "nomDeRecette": "Risotto Végétarien",
+      "author": "Jeanne",
+      "source": "",
+      "numberOfPerson": "2",
+      "infoHeader": {
+        "img": {
+          "src": "https://www.brillante.es/wp-content/uploads/2020/04/julien-pianetti-qIPRTMulc-g-unsplash.jpg",
+          "alt": "photo de risotto"
+        },
+        "resume": {
+          "preparationTime": "5",
+          "cookingTime": "20",
+          "difficulty": "Facile",
+          "cost": "Abordable"
+        },
+        "ingredients": [
+          { "quantity": "140", "unit": "g", "name": " de riz à risotto" },
+          { "quantity": "50", "unit": "cl", "name": "d'eau" },
+          { "quantity": "1", "unit": "cube", "name": "bouillon de légume" },
+          {
+            "quantity": "4 moyens ou 2 gros",
+            "unit": "",
+            "name": "champignons"
+          },
+          {
+            "quantity": "un ",
+            "unit": "quart ou une moitié",
+            "name": "d'oignon jaune"
+          },
+          {
+            "quantity": "20",
+            "unit": "cl",
+            "name": "de crème fraiche semi-épaisse"
+          },
+          {
+            "quantity": "calculé à l'oeil :",
+            "unit": "",
+            "name": "du parmesan"
+          },
+          {
+            "quantity": "deux ",
+            "unit": "cuillères à soupe",
+            "name": "d'huile d'olive ou tournesol"
+          }
+        ],
+        "tools": [
+          "une spatule",
+          "une poêle ",
+          "une planche à découper",
+          "un couteau éminceur",
+          "un récipient à eau pouvant résister à la chaleur forte",
+          "bouilloire ou micro-ondes"
+        ]
+      },
+      "etapes": [
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "faire bouillir de l'eau dans une bouilloire, ou chauffer au micro-onde et ajouter le cube de bouillon en l'effritant. Remuer jusqu'à dilution complète. "
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "éplucher l'oignon et les champignons, et couper en lamelles fines ou plus épaisses selon vos gouts. "
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "dans une poêle chaude (à feu moyen) verser l'huile ainsi que le riz et remuer jusqu'à ce que celui-ci devienne translucide."
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "ajouter une première fois une partie du bouillon et remuer à la spatule le riz pour qu'il absorbe sans accrocher. "
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Lorsque l'eau est absorbée ou s'évapore presque complètement, ajouter en à nouveau et continuer ces étapes pendant presque 15 minutes. "
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "à mi-cuisson ajouter les champignons ainsi que l'oignon. Attention : il ne faut pas les ajouter lorsque trop d'eau reste dans la poêle, les champignons l'absorberaient et deviendrait spongieux. Il Faut les laisser cuire un peu avant de rajouter à nouveau du bouillon. "
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "au bout de 15 minutes de cuisson, ajouter la crème petit à petit (le dosage reste personnel et doit vous convenir, donc à vous de voir. N'hésitez pas à gouter votre riz de temps à autre pour vérifier son état de cuisson. "
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "lorsque le risotto semble cuit, mettre une dernière fois une légère quantité de crème ainsi que le parmesan et remuer jusqu'à ce que la texture soit onctueuse et légèrement élastique. "
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "C'est prêt ! dégustez ça bien chaud et faite profiter vos proches ! "
+        }
+      ]
+    }
   }
 ]

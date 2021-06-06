@@ -67,7 +67,8 @@ export default {
       '/gratin_de_raviole',
       '/cakosomon',
       '/omelettetomatefromage',
-      '/gratindepates'
+      '/gratindepates',
+      '/risottovegetarien'
 		]
 	},
 
