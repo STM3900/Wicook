@@ -1,5 +1,132 @@
 [
   {
+    "url": "gnocchi",
+    "recetteInfos": {
+      "nomDeRecette": "Gnocchi maison",
+      "author": "Théo",
+      "source": "",
+      "numberOfPerson": "2",
+      "infoHeader": {
+        "img": {
+          "src": "https://theomigeat.com/gnocchi.jpg",
+          "alt": "photo de gnocchi"
+        },
+        "resume": {
+          "preparationTime": "120",
+          "cookingTime": "3",
+          "difficulty": "Facile",
+          "cost": "Bon marché"
+        },
+        "ingredients": [
+          {
+            "quantity": "environ 3",
+            "unit": "",
+            "name": "grosses patates  (pour 2 personnes)"
+          },
+          {
+            "quantity": "au moins 1",
+            "unit": "kg",
+            "name": "de farine de blé (non complète, prenez large)"
+          },
+          {
+            "quantity": "1",
+            "unit": "",
+            "name": "œuf (ou 2 si vous voulez faire pour plus de 2 personnes)"
+          }
+        ],
+        "tools": [
+          "Épluche patates ou couteau",
+          "Casserole assez grande pour accueillir les patates et les gnocchi",
+          "Presse-purée",
+          "Fourchette (je déconne zéro)",
+          "Une main (la votre hein, et la coupez pas)",
+          "Saladier"
+        ]
+      },
+      "etapes": [
+        {
+          "img": {
+            "src": "https://cdn.discordapp.com/attachments/455791465734602782/843485785914343444/IMG_20210516_155105.jpg",
+            "alt": "photo de patates"
+          },
+          "text": "Épluchez vos patates et découpez-les en cubes (ou en gros morceaux, cela permet d'accélérer la cuisson des patates), puis lavez-les à l'eau froide."
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Remplissez votre casserole d'eau froide, puis ajoutez-y vos belles patates, puis faites les cuire. Comptez un temps de cuisson d'environ une demi-heure. \nPour vérifier si vos patates sont bien cuites, plongez-y la lame d'un couteau dedans. S'il n'y a aucune résistance, c'est que c'est bon !"
+        },
+        {
+          "img": {
+            "src": "https://cdn.discordapp.com/attachments/455791465734602782/843177875648806922/IMG_20210514_190214.jpg",
+            "alt": "patates cuites prête à être réduite en purée"
+          },
+          "text": "Égouttez vos patates, disposez-les dans le saladier puis réduisez-les en purée. Ensuite, ajoutez-y les œufs et mélangez"
+        },
+        {
+          "img": {
+            "src": "https://cdn.discordapp.com/attachments/455791465734602782/843177875279446056/IMG_20210514_190511.jpg",
+            "alt": "purée de patates avec des œufs "
+          },
+          "text": "Laissez votre purée refroidir, pour que vous puissiez la manipuler avec vos mains sans vous brûler."
+        },
+        {
+          "img": {
+            "src": "https://cdn.discordapp.com/attachments/455791465734602782/843177874961203250/IMG_20210514_191746.jpg",
+            "alt": "pate à gnocchi"
+          },
+          "text": "Munissez-vous de votre farine, puis ajoutez-en un peu, puis mélangez jusqu'à que celle-ci soit incorporé dans la pâte. Répétez ce processus jusqu'à que votre pâte ne colle plus (ou presque)\n\nAttention : Si vous cuisinez seul, mélangez votre pâte avec une seule main sinon vous serez coincé jusqu'à la fin des temps :("
+        },
+        {
+          "img": {
+            "src": "https://cdn.discordapp.com/attachments/455791465734602782/843177873984454666/IMG_20210514_193411.jpg",
+            "alt": "Le motherGnocchi"
+          },
+          "text": "Une fois votre pâte bien constituée, transformez-la en une jolie bouboule et disposez-la sur votre table (qui a bien sur une nappe de protection et de la farine dessus pour que ça ne colle pas)"
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Maintenant la partie répétitive ! C'est l'heure de la formation des gnocchi.\n\nCommencez par faire un pâton d'environ la taille du creux de votre main"
+        },
+        {
+          "img": {
+            "src": "https://cdn.discordapp.com/attachments/455791465734602782/843565070062714890/IMG_20210516_210551.jpg",
+            "alt": "serpents de gnocchi"
+          },
+          "text": "Roulez ce pâton pour le transformer en joli serpent, dont son épaisseur sera celle de vos gnocchi"
+        },
+        {
+          "img": {
+            "src": "https://cdn.discordapp.com/attachments/455791465734602782/843565069631488050/IMG_20210516_210601.jpg",
+            "alt": "bébé gnocchi pas encore formés"
+          },
+          "text": "Coupez vos serpents en part égales, pas trop grosse : ce seront vos gnocchi"
+        },
+        {
+          "img": {
+            "src": "https://cdn.discordapp.com/attachments/455791465734602782/843177364884422718/IMG_20210514_194054.jpg",
+            "alt": "formation des gnocchi"
+          },
+          "text": "Il va falloir donner un peu de forme à vos gnocchi ! Pour cela, munissez-vous de votre fidèle fourchette, retournez là, puis faire rouler votre gnocchi dessus en le maintenant avec votre pouce.\n\n(C'est assez compliqué au début mais cela vient avec la pratique)"
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Répétez les étapes 7-8-9-10 jusqu'à que tous vos gnocchi soient formés. (Si possible il est conseillé de faire ses étapes à plusieurs pour éviter de trop s'ennuyer, n'hésitez pas à mettre de la musique pour rendre ce moment un peu moins barbant) "
+        },
+        {
+          "img": {
+            "src": "https://cdn.discordapp.com/attachments/455791465734602782/843177363986448454/IMG_20210514_204609.jpg",
+            "alt": "gnocchi qui cuisent paisiblement"
+          },
+          "text": "On approche de la fin (ou de la faim) !\n\nPortez de l'eau à ébullition (vous pouvez y ajouter un peu de gros sel pour y relever le gout), puis introduisez-y vos beaux gnocchi. Laissez cuire pendant environ 3 minutes. (Vous pouvez voir si vos gnocchi sont cuit s'ils remontent à la surface)"
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Égouttez vos gnocchi et disposez-les ou vous le voulez en y ajoutant beurre, parmesan, ou tout ce que vous désirez y ajouter.\n\nRégalez-vous !"
+        }
+      ]
+    }
+  },
+  {
     "url": "kfc",
     "recetteInfos": {
       "nomDeRecette": "KFC maison",
