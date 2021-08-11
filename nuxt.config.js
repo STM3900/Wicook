@@ -63,6 +63,7 @@ export default {
 
   generate: {
     routes: [
+      "/gnocchi",
       "/kfc",
       "/arancini",
       "/gratin_de_raviole",
