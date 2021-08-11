@@ -699,5 +699,85 @@
         }
       ]
     }
+  },
+  {
+    "url": "carbonara",
+    "recetteInfos": {
+      "nomDeRecette": "pâtes carbo",
+      "author": "Bubzy_h",
+      "source": "",
+      "numberOfPerson": "1 grand ou 2 petits (3, si vous doublez les doses)",
+      "infoHeader": {
+        "img": {
+          "src": "https://cdn.discordapp.com/attachments/759178221928972298/872575356002009138/Screenshot_20210804-214218.png",
+          "alt": "Carbo à l'oignon"
+        },
+        "resume": {
+          "preparationTime": "5",
+          "cookingTime": "",
+          "difficulty": "Facile",
+          "cost": "Moyen"
+        },
+        "ingredients": [
+          {
+            "quantity": "250",
+            "unit": "g",
+            "name": "Tagliatelle fraiches aux œufs (ou Spaghetti si c'est la hess)"
+          },
+          { "quantity": "1,5", "unit": "", "name": "oignons" },
+          { "quantity": "75", "unit": "g", "name": "Lardon (ou allumette)" },
+          { "quantity": "", "unit": "", "name": "un jaune d'oeuf" },
+          {
+            "quantity": "fond de poêle",
+            "unit": "",
+            "name": "Vin blanc de cuisson"
+          },
+          {
+            "quantity": "un grand fond de poêle",
+            "unit": "",
+            "name": "Crème Fraiche  "
+          },
+          { "quantity": "50", "unit": "g", "name": "parmesan" }
+        ],
+        "tools": [
+          "poêle",
+          "cuillère en bois",
+          "casserol",
+          "cuisine",
+          "frigo",
+          "plaque chauffante",
+          "passoire",
+          "assiette"
+        ]
+      },
+      "etapes": [
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Mettez les Lardons dans la poêle (sans beurre ou huile), ils cuiront dans leur graisse.\nPendant ce temps, coupez les oignons en petits morceaux. En mélangeant un peu les lardons"
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Apres avoir coupé les oignons, les lardons devraient frémir (si c'est pas le cas augmenter le feu). Rajoutez les oignons\n\nPour les bleus, cuisson désirée: Lardons pas rose, oignon à minimum mou-transparent (à adapter a vos envies)\nOubliez pas de mélanger!"
+        },
+        {
+          "img": {
+            "src": "https://cdn.discordapp.com/attachments/759178221928972298/872575815685144586/IMG-20210125-WA0002.jpg",
+            "alt": ""
+          },
+          "text": "NB: vous pouvez faire cette étape en même temps que la 2 si vous gérez bien la cuisson de vos pâtes.\n\nSi vos lardons et oignons sont déjà parfaitement cuits, recouvrez la poêle et descendez le feu (oubliez pas de mélanger de temps en temps)\nMettez l'eau à bouillir pour les pâtes et rajoutez une pincé de sel dans l'eau.\nLorsque l'eau est porté a ébullition, rajoutez les pâtes  et suivez les indications du paquet."
+        },
+        {
+          "img": {
+            "src": "https://cdn.discordapp.com/attachments/759178221928972298/872575585807904778/IMG-20210125-WA0004.jpg",
+            "alt": ""
+          },
+          "text": "2 minutes avant la fin de cuisson des pates, rajoutez de la crème fraiche (n'hésitez pas a en mettre), et le fond de vin blanc.\nSalez et poivrez puis attendez (en mélangeant)!"
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "essorez les pates\n\nDressage:\nmettez les pates, la sauce, le parmesan puis le jaune d'oeuf :3\n\nBon appétit! "
+        }
+      ]
+    }
   }
 ]
