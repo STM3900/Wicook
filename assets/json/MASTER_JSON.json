@@ -21,7 +21,7 @@
           {
             "quantity": "environ 3",
             "unit": "",
-            "name": "grosses patates  (pour 2 personnes)"
+            "name": "grosses patates (pour 2 personnes)"
           },
           {
             "quantity": "au moins 1",
@@ -31,7 +31,7 @@
           {
             "quantity": "1",
             "unit": "",
-            "name": "œuf (ou 2 si vous voulez faire pour plus de 2 personnes)"
+            "name": "oeuf (ou 2 si vous voulez faire pour plus de 2 personnes)"
           }
         ],
         "tools": [
@@ -213,7 +213,7 @@
           {
             "quantity": "1",
             "unit": "",
-            "name": "œuf"
+            "name": "oeuf"
           },
           {
             "quantity": "½",
@@ -849,7 +849,7 @@
           {
             "quantity": "250",
             "unit": "g",
-            "name": "Tagliatelle fraiches aux œufs (ou Spaghetti si c'est la hess)"
+            "name": "Tagliatelle fraiches aux oeufs (ou Spaghetti si c'est la hess)"
           },
           { "quantity": "1,5", "unit": "", "name": "oignons" },
           { "quantity": "75", "unit": "g", "name": "Lardon (ou allumette)" },

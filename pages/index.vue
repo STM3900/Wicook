@@ -14,13 +14,16 @@
       <input
         type="text"
         v-model="filterValue"
-        placeholder="Chercher une recette"
+        placeholder="Chercher une recette ou un ingrédient"
       />
     </div>
     <article v-if="data.length > 0">
       <template v-for="page in data">
         <div
-          v-if="filter(page.recetteInfos.nomDeRecette)"
+          v-if="
+            filterIngredient(page.recetteInfos.infoHeader.ingredients) ||
+              filter(page.recetteInfos.nomDeRecette)
+          "
           :key="page.url"
           class="card"
           :class="{ theo: page.url == 'gnocchi' }"
@@ -78,6 +81,24 @@ export default {
         temp = true;
       } else if (!this.filterValue) {
         temp = true;
+      }
+
+      return temp;
+    },
+    filterIngredient(ingredients) {
+      let temp = false;
+      let i = 0;
+      while (!temp && i < ingredients.length) {
+        if (
+          ingredients[i].name
+            .toLowerCase()
+            .includes(this.filterValue.toLowerCase())
+        ) {
+          temp = true;
+        } else if (!this.filterValue) {
+          temp = true;
+        }
+        i++;
       }
 
       return temp;
