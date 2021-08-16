@@ -906,5 +906,84 @@
         }
       ]
     }
+  },
+  {
+    "url": "le_bon_gros_cake_au_citron",
+    "recetteInfos": {
+      "nomDeRecette": "Cake au citron ultime",
+      "author": "Didi tmtc",
+      "source": "",
+      "numberOfPerson": "jsp frr tu peux le manger tout seul techniquement plus ou moins 10 morceaux quoi donc minimum une",
+      "infoHeader": {
+        "img": {
+          "src": "https://cdn.discordapp.com/attachments/459043150489452544/876825276619837470/unknown.png",
+          "alt": "GATO CITRON"
+        },
+        "resume": {
+          "preparationTime": "20",
+          "cookingTime": "40",
+          "difficulty": "Très facile",
+          "cost": "Bon marché"
+        },
+        "ingredients": [
+          {
+            "quantity": "175g (ou 200g si vous voulez vous deglinger vos arteres)",
+            "unit": "",
+            "name": "Du SUCRE"
+          },
+          {
+            "quantity": "120",
+            "unit": "g",
+            "name": "de bon beurre fondu samer"
+          },
+          { "quantity": "", "unit": "", "name": "du zeste de citron" },
+          { "quantity": "3", "unit": "", "name": "OEUFS" },
+          { "quantity": "150", "unit": "g", "name": "de farine" },
+          { "quantity": "", "unit": "", "name": "jus de 2 piti citrons" },
+          {
+            "quantity": "1/2",
+            "unit": "",
+            "name": "cuillère a café de levure chimique"
+          },
+          {
+            "quantity": "",
+            "unit": "",
+            "name": "du jus d'un piti citron en plus si vous voulez faire un glacage etou"
+          },
+          {
+            "quantity": "130",
+            "unit": "g",
+            "name": "de sucre glace pour le glacage  C PA OBLIGEY"
+          }
+        ],
+        "tools": ["une rape pour le zeste", "un fouet", "un moule a KEK"]
+      },
+      "etapes": [
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Vous faites prechauffez le four a 170° comme un vrai bonhomme. \n\nMelangez le sucre et le beurre fondu, un peu faut pas la blanchir juste incorporer l'un dans l'autre tmtc"
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Rapez le citron pour choper le zeste et pas le ziste ( la partie blanche) ca rend les trucs ultra amer c'est degueu. Et mettez le zeste dans le mélange, puis les oeufs UN PAR UN. Apres vous ajoutez la farine, la levure et les OEUFS"
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Mettez au FOUR pendant 30 à 40 minutes parfois 45 si votre moule il est petit et profond. Checkez avec un couteau la cuisson si vous etes pas sur, si le couteau ressort avec de la pate pas cuite remettez pour 5 minutes dans le FOUR."
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "vous pouvez a préseng DEGUSTER VOTRE CAKE QUAND il sort du FOUR.\nSauf si vous voulez faire le glacage, enroulez le cake démoulé dans du film alimentaire et mettez le dans le frigo pour qu'il refroidisse ses morts."
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Pendant que le KEK refroidit préparez le glacage en melangeant le sucre glace et le jus de citron.\nQuand le KEk est froid sortez le du frigo et enlevez le film alimentaire."
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Mettez le gato sur une grille et recouvrez le gato de glacage qui devra durcir en quelques minutes. \nVous pouvez le decorer avec du zeste de citron pour le rendre ultra bg\nVOUS POUVEZ A PRESENT DEGUSTER LE KEK"
+        }
+      ]
+    }
   }
 ]

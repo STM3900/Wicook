@@ -72,7 +72,8 @@ export default {
       "/gratindepates",
       "/risottovegetarien",
       "/pancakepommes",
-      "/carbonara"
+      "/carbonara",
+      "le_bon_gros_cake_au_citron"
     ]
   },
 
