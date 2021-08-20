@@ -44,6 +44,38 @@
         v-model="json.recetteInfos.nomDeRecette"
       />
 
+      <p>Votre recette est-elle :</p>
+      <div class="form-regime">
+        <aside>
+          <input
+            type="radio"
+            id="recipeRegime0"
+            value=""
+            v-model="json.recetteInfos.regime"
+          />
+          <label for="recipeRegime0">Non Végétarienne / Végan ?</label>
+        </aside>
+
+        <aside>
+          <input
+            type="radio"
+            id="recipeRegime2"
+            value="Végétarien"
+            v-model="json.recetteInfos.regime"
+          />
+          <label for="recipeRegime2">Végétarienne ?</label>
+        </aside>
+        <aside>
+          <input
+            type="radio"
+            id="recipeRegime1"
+            value="Végan"
+            v-model="json.recetteInfos.regime"
+          />
+          <label for="recipeRegime1">Végan ?</label>
+        </aside>
+      </div>
+
       <label for="author">Son auteur</label>
       <input
         type="text"
@@ -277,6 +309,7 @@ export default {
         url: "",
         recetteInfos: {
           nomDeRecette: "",
+          regime: "",
           author: "",
           source: "",
           numberOfPerson: "",
@@ -460,6 +493,20 @@ input[type="number"] {
 input:focus {
   outline: none;
   border: solid black 1px;
+}
+
+.form-regime {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: center;
+  margin-bottom: 25px;
+  margin-top: -8px;
+}
+
+.form-regime label {
+  margin-right: 15px;
 }
 
 .tool input {
@@ -725,6 +772,26 @@ textarea:focus {
 
   .tool input {
     width: 90%;
+  }
+
+  .form-regime {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: center;
+  }
+
+  .form-regime aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: center;
+  }
+
+  .form-regime label {
+    margin-right: 0px;
   }
 }
 

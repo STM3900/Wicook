@@ -46,7 +46,14 @@ export default {
         imports: [
           {
             set: "@fortawesome/free-solid-svg-icons",
-            icons: ["faHome", "faSearch", "faCode", "faPlus"]
+            icons: [
+              "faHome",
+              "faSearch",
+              "faCode",
+              "faPlus",
+              "faSeedling",
+              "faLeaf"
+            ]
           },
           { set: "@fortawesome/free-brands-svg-icons", icons: [] },
           { set: "@fortawesome/free-regular-svg-icons", icons: [] }

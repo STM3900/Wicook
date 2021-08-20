@@ -3,6 +3,7 @@
     "url": "gnocchi",
     "recetteInfos": {
       "nomDeRecette": "Gnocchi maison",
+      "regime": "Végétarien",
       "author": "Théo",
       "source": "",
       "numberOfPerson": "2",
@@ -130,6 +131,7 @@
     "url": "kfc",
     "recetteInfos": {
       "nomDeRecette": "KFC maison",
+      "regime": "",
       "author": "Tagpower",
       "source": "",
       "numberOfPerson": "1",
@@ -313,6 +315,7 @@
     "recetteInfos": {
       "nomDeRecette": "Arancini sicilienne",
       "author": "Enzo",
+      "regime": "Végan",
       "source": "",
       "numberOfPerson": "toute la famille",
       "infoHeader": {
@@ -360,6 +363,7 @@
     "url": "gratin_de_ravioles",
     "recetteInfos": {
       "nomDeRecette": "Gratin de ravioles au fromage",
+      "regime": "Végétarien",
       "author": "Jeanne",
       "source": "",
       "numberOfPerson": "2 à 4",
@@ -469,6 +473,7 @@
     "recetteInfos": {
       "nomDeRecette": "Cake au saumon",
       "author": "Agapouet",
+      "regime": "",
       "source": "",
       "numberOfPerson": "environ 4",
       "infoHeader": {
@@ -537,6 +542,7 @@
     "url": "omelettetomatefromage",
     "recetteInfos": {
       "nomDeRecette": "Bonne omelette maison",
+      "regime": "Végétarien",
       "author": "Félicieng",
       "source": "",
       "numberOfPerson": "1",
@@ -555,10 +561,9 @@
           { "quantity": "", "unit": "2", "name": "oeuf" },
           { "quantity": "quelques feuilles", "unit": "", "name": "basilique" },
           { "quantity": "quelques feuilles", "unit": "", "name": "menthe" },
-          { "quantity": "", "unit": "1", "name": "onion" },
+          { "quantity": "", "unit": "1", "name": "oignon" },
           { "quantity": "", "unit": "4", "name": "tomate cerise " },
-          { "quantity": "1/2", "unit": "", "name": "fromage " },
-          { "quantity": "1/2", "unit": "", "name": "jambon (optionel)" }
+          { "quantity": "1/2", "unit": "", "name": "fromage " }
         ],
         "tools": [
           "recipient",
@@ -586,6 +591,7 @@
     "url": "gratindepates",
     "recetteInfos": {
       "nomDeRecette": "Gratin de pâtes",
+      "regime": "Végétarien",
       "author": "Santeripe",
       "source": "",
       "numberOfPerson": "4",
@@ -654,6 +660,7 @@
     "url": "risottovegetarien",
     "recetteInfos": {
       "nomDeRecette": "Risotto Végétarien",
+      "regime": "Végétarien",
       "author": "Jeanne",
       "source": "",
       "numberOfPerson": "2",
@@ -751,6 +758,7 @@
     "url": "pancakepommes",
     "recetteInfos": {
       "nomDeRecette": "Pancakes aux pommes",
+      "regime": "Végétarien",
       "author": "Agapouet",
       "source": "",
       "numberOfPerson": "2-4",
@@ -831,6 +839,7 @@
     "url": "carbonara",
     "recetteInfos": {
       "nomDeRecette": "pâtes carbo",
+      "regime": "",
       "author": "Bubzy_h",
       "source": "",
       "numberOfPerson": "1 grand ou 2 petits (3, si vous doublez les doses)",
@@ -911,6 +920,7 @@
     "url": "le_bon_gros_cake_au_citron",
     "recetteInfos": {
       "nomDeRecette": "Cake au citron ultime",
+      "regime": "Végétarien",
       "author": "Didi tmtc",
       "source": "",
       "numberOfPerson": "jsp frr tu peux le manger tout seul techniquement plus ou moins 10 morceaux quoi donc minimum une",

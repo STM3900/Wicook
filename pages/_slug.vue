@@ -3,6 +3,7 @@
     <HomeButton title="Accueil" icon="home" link="/" :fontSize="20" />
     <Header
       :title="data.nomDeRecette"
+      :regime="data.regime"
       :author="data.author"
       :info="data.infoHeader"
       :isOriginal="isOriginal"

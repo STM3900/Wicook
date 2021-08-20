@@ -6,9 +6,17 @@
       <p>Partagé par {{ author }}</p>
       <a :href="source" class="link">Source</a>
     </div>
-    <p v-if="numberOfPerson" :id="isOriginal ? '' : 'margin'">
-      Pour : <b>{{ numberOfPerson }}</b> {{ getPerson }}
-    </p>
+    <div class="header-container">
+      <p v-if="numberOfPerson" :id="isOriginal ? '' : 'margin'">
+        Pour : <b>{{ numberOfPerson }}</b> {{ getPerson }}
+      </p>
+      <p v-if="regime">
+        <fa
+          :class="regime == 'Végan' ? 'vegan' : 'vegetarian'"
+          :icon="['fas', getRegimeIcon(regime)]"
+        />{{ regime }}
+      </p>
+    </div>
     <hr />
     <div v-if="info.resume" class="resume">
       <section v-if="info.resume.preparationTime">
@@ -55,6 +63,10 @@ export default {
       type: String,
       default: null
     },
+    regime: {
+      type: String,
+      default: null
+    },
     author: {
       type: String,
       default: null
@@ -91,6 +103,11 @@ export default {
       }
       return string;
     }
+  },
+  methods: {
+    getRegimeIcon(regime) {
+      return regime == "Végan" ? "seedling" : "leaf";
+    }
   }
 };
 </script>
@@ -107,6 +124,25 @@ h1 {
 p {
   color: rgb(87, 87, 87);
   margin: 0;
+}
+
+.header-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: center;
+}
+
+.header-container .vegan {
+  color: #a7c957;
+  margin-right: 7px;
+}
+
+.header-container .vegetarian {
+  color: #6a994e;
+  margin-right: 7px;
 }
 
 .resume {

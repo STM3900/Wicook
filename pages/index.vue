@@ -17,6 +17,13 @@
         placeholder="Chercher une recette ou un ingrédient"
       />
     </div>
+    <div class="legend">
+      <p><fa class="vegan legend-icon" :icon="['fas', 'seedling']" />Végan</p>
+      <p>
+        <fa class="vegetarian legend-icon" :icon="['fas', 'leaf']" />Végétarien
+      </p>
+    </div>
+
     <article v-if="data.length > 0">
       <template v-for="page in data">
         <div
@@ -38,10 +45,19 @@
           </div>
           <div class="text">
             <h3>{{ page.recetteInfos.nomDeRecette }}</h3>
-            <p>Par {{ page.recetteInfos.author }}</p>
-          </div>
-        </div></template
-      >
+            <section>
+              <p>Par {{ page.recetteInfos.author }}</p>
+              <p v-if="page.recetteInfos.regime">
+                <fa
+                  :class="
+                    page.recetteInfos.regime == 'Végan' ? 'vegan' : 'vegetarian'
+                  "
+                  :icon="['fas', getRegimeIcon(page.recetteInfos.regime)]"
+                />
+              </p>
+            </section>
+          </div></div
+      ></template>
     </article>
     <article v-else class="no-recipe">
       <p>
@@ -109,6 +125,9 @@ export default {
         unit: "qodjzio",
         name: "hfuiehz"
       });
+    },
+    getRegimeIcon(regime) {
+      return regime == "Végan" ? "seedling" : "leaf";
     }
   }
 };
@@ -134,6 +153,25 @@ export default {
 .logo img {
   height: 125px;
   transition: 0.3s;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: center;
+  gap: 2em;
+  margin-bottom: 20px;
+}
+
+.legend .legend-icon {
+  margin-right: 7px;
+}
+
+.legend p {
+  color: rgb(87, 87, 87);
 }
 
 article {
@@ -162,6 +200,14 @@ article {
   transform: scale(0.95);
 }
 
+.vegan {
+  color: #a7c957;
+}
+
+.vegetarian {
+  color: #6a994e;
+}
+
 input {
   width: 100%;
   /* haut | droit | bas | gauche */
@@ -172,7 +218,6 @@ input {
   box-sizing: border-box; /* Opera/IE 8+ */
 
   margin-top: 10px;
-  margin-bottom: 20px;
   border: solid rgb(87, 87, 87) 1px;
   font-family: "Open Sans", sans-serif;
   transition: 0.3s;
@@ -189,6 +234,7 @@ input:focus {
   padding: 27px 20px 27px 15px;
   font-size: 18px;
   color: #ec5353;
+  color: #d3d3d3;
 }
 
 .card .img img {
@@ -213,6 +259,15 @@ input:focus {
   font-size: 14px;
 }
 
+.card .text section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+}
+
 .no-recipe p {
   width: 100%;
   text-align: center;
@@ -228,6 +283,14 @@ input:focus {
 
 .theo .text p {
   color: rgb(240, 240, 240);
+}
+
+.theo .vegan {
+  color: white;
+}
+
+.theo .vegetarian {
+  color: white;
 }
 
 @media screen and (max-width: 810px) {
