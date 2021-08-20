@@ -33,7 +33,6 @@
           "
           :key="page.url"
           class="card"
-          :class="{ theo: page.url == 'gnocchi' }"
           @click="goToRecipe(page.url)"
         >
           <div class="img">
@@ -271,26 +270,6 @@ input:focus {
 .no-recipe p {
   width: 100%;
   text-align: center;
-}
-
-.theo {
-  background: #ec5353;
-}
-
-.theo .text h3 {
-  color: white;
-}
-
-.theo .text p {
-  color: rgb(240, 240, 240);
-}
-
-.theo .vegan {
-  color: white;
-}
-
-.theo .vegetarian {
-  color: white;
 }
 
 @media screen and (max-width: 810px) {
