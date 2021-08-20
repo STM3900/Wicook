@@ -52,7 +52,8 @@ export default {
               "faCode",
               "faPlus",
               "faSeedling",
-              "faLeaf"
+              "faLeaf",
+              "faDrumstickBite"
             ]
           },
           { set: "@fortawesome/free-brands-svg-icons", icons: [] },

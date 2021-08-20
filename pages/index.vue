@@ -17,19 +17,75 @@
         placeholder="Chercher une recette ou un ingrédient"
       />
     </div>
-    <div class="legend">
-      <p><fa class="vegan legend-icon" :icon="['fas', 'seedling']" />Végan</p>
-      <p>
-        <fa class="vegetarian legend-icon" :icon="['fas', 'leaf']" />Végétarien
-      </p>
+    <div class="wrapper-container">
+      <div class="radio-wrapper">
+        <input
+          type="radio"
+          name="select"
+          id="option-1"
+          value=""
+          v-model="selectedRegime"
+        />
+        <input
+          type="radio"
+          name="select"
+          id="option-2"
+          value="Végétarien"
+          v-model="selectedRegime"
+        />
+        <input
+          type="radio"
+          name="select"
+          id="option-3"
+          value="Végan"
+          v-model="selectedRegime"
+        />
+        <label
+          @click="addRegimeToStorage"
+          for="option-1"
+          class="option option-1"
+        >
+          <span
+            ><fa
+              class="meat legend-icon"
+              :icon="['fas', 'drumstick-bite']"
+            />Tous</span
+          >
+        </label>
+        <label
+          @click="addRegimeToStorage"
+          for="option-2"
+          class="option option-2"
+        >
+          <span
+            ><fa
+              class="vegetarian legend-icon"
+              :icon="['fas', 'leaf']"
+            />Végétarien</span
+          >
+        </label>
+        <label
+          @click="addRegimeToStorage"
+          for="option-3"
+          class="option option-3"
+        >
+          <span
+            ><fa
+              class="vegan legend-icon"
+              :icon="['fas', 'seedling']"
+            />Végan</span
+          >
+        </label>
+      </div>
     </div>
 
     <article v-if="data.length > 0">
       <template v-for="page in data">
         <div
           v-if="
-            filterIngredient(page.recetteInfos.infoHeader.ingredients) ||
-              filter(page.recetteInfos.nomDeRecette)
+            (filterIngredient(page.recetteInfos.infoHeader.ingredients) ||
+              filter(page.recetteInfos.nomDeRecette)) &&
+              filterRegime(page.recetteInfos.regime)
           "
           :key="page.url"
           class="card"
@@ -77,6 +133,7 @@ export default {
     return {
       data: MASTER_JSON,
       filterValue: "",
+      selectedRegime: "",
       testList: [
         {
           quantity: "56",
@@ -85,6 +142,11 @@ export default {
         }
       ]
     };
+  },
+  mounted() {
+    if (localStorage.getItem("regime")) {
+      this.selectedRegime = localStorage.getItem("regime");
+    }
   },
   methods: {
     goToRecipe(url) {
@@ -118,21 +180,82 @@ export default {
 
       return temp;
     },
-    testAdd() {
-      this.testList.push({
-        quantity: "56",
-        unit: "qodjzio",
-        name: "hfuiehz"
-      });
+    filterRegime(regime) {
+      let temp = true;
+      if (this.selectedRegime) {
+        if (this.selectedRegime == "Végan") {
+          if (regime != "Végan") {
+            temp = false;
+          }
+        } else if (regime != "Végétarien") {
+          temp = false;
+        }
+      }
+      return temp;
     },
     getRegimeIcon(regime) {
       return regime == "Végan" ? "seedling" : "leaf";
+    },
+    addRegimeToStorage() {
+      setTimeout(() => {
+        localStorage.setItem("regime", this.selectedRegime);
+      }, 10);
     }
   }
 };
 </script>
 
 <style scoped>
+.radio-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: center;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  gap: 15px;
+}
+
+.radio-wrapper .option {
+  background: #fff;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid lightgrey;
+  transition: all 0.3s ease;
+}
+
+.radio-wrapper .legend-icon {
+  margin-right: 10px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2,
+#option-3:checked:checked ~ .option-3 {
+  border-color: gray;
+}
+
+#option-1:checked:checked ~ .option-1 .dot,
+#option-2:checked:checked ~ .option-2 .dot,
+#option-3:checked:checked ~ .option-3 .dot {
+  background: #fff;
+}
+
+.radio-wrapper .option span {
+  color: #808080;
+}
+
+/* content */
+
 .content {
   flex: 1 0 auto;
 }
@@ -152,25 +275,6 @@ export default {
 .logo img {
   height: 125px;
   transition: 0.3s;
-}
-
-.legend {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: center;
-  gap: 2em;
-  margin-bottom: 20px;
-}
-
-.legend .legend-icon {
-  margin-right: 7px;
-}
-
-.legend p {
-  color: rgb(87, 87, 87);
 }
 
 article {
@@ -197,6 +301,10 @@ article {
 
 .card:active {
   transform: scale(0.95);
+}
+
+.meat {
+  color: #ec5353;
 }
 
 .vegan {
