@@ -254,8 +254,6 @@ input[type="radio"] {
   color: #808080;
 }
 
-/* content */
-
 .content {
   flex: 1 0 auto;
 }
@@ -397,6 +395,10 @@ input:focus {
 
   .logo img {
     height: 75px;
+  }
+
+  .radio-wrapper .option span {
+    font-size: 14px;
   }
 }
 
