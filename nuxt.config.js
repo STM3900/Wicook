@@ -81,7 +81,8 @@ export default {
       "/risottovegetarien",
       "/pancakepommes",
       "/carbonara",
-      "le_bon_gros_cake_au_citron"
+      "le_bon_gros_cake_au_citron",
+      "/turboflemme"
     ]
   },
 

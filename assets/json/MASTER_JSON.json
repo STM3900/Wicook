@@ -995,5 +995,59 @@
         }
       ]
     }
+  },
+  {
+    "url": "turboflemme",
+    "recetteInfos": {
+      "nomDeRecette": "Turboflemme maison !",
+      "regime": "Végan",
+      "author": "River",
+      "source": "",
+      "numberOfPerson": "3",
+      "infoHeader": {
+        "img": {
+          "src": "https://cdn.discordapp.com/attachments/583712822698180608/882634293258625104/20210901_160706.jpg",
+          "alt": "Pratique en cas de disette "
+        },
+        "resume": {
+          "preparationTime": "5",
+          "cookingTime": "20",
+          "difficulty": "Très facile",
+          "cost": "Bon marché"
+        },
+        "ingredients": [
+          {
+            "quantity": "1 paquet (250",
+            "unit": "g)",
+            "name": "Nouilles chinoises"
+          },
+          { "quantity": "2", "unit": "", "name": "Oignons" },
+          { "quantity": "Au jugé", "unit": "", "name": "Sauce soja" }
+        ],
+        "tools": ["Casserole", "Poêle"]
+      },
+      "etapes": [
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Epluchez les oignons puis fracassez-les en fines lamelles. Avec véhémence pour une meilleure cuisson."
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Faites bouillir de l'eau ! Au premier frémissement, ajoutez les nouilles. Prenez garde, les nouilles chinoises ça cuit vite."
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Faites revenir les oignons jusqu'à pouvoir les couper (sans forcer comme une brute) à l'aide de votre fidèle spatule en bois, pis rajouter de la sauce soja pour tapisser la poêle."
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Ajoutez de l'eau à chaque fois que le niveau de liquide devient trop faible (risque d'oignon qui brûle le cas échéant)."
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Lorsque vous jugez les oignons suffisamment cuit, balancez-y dont les nouilles égouttées au préalable. Ajoutez encore une 'tite dose d'eau pour laissez les nouilles s'imbiber de sauce soja.\nC prè !\n(La recette \"turboflemme\" existe aussi en version deluxe en incorporant à la préparation des cubes de tofu et des bouts de champax bruns)"
+        }
+      ]
+    }
   }
 ]
