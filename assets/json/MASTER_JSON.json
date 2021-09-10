@@ -1049,5 +1049,60 @@
         }
       ]
     }
+  },
+  {
+    "url": "bananabread",
+    "recetteInfos": {
+      "nomDeRecette": "Gâteau à la banane",
+      "regime": "Végétarien",
+      "author": "Tagpower",
+      "source": "",
+      "numberOfPerson": "4",
+      "infoHeader": {
+        "img": {
+          "src": "https://imgur.com/lcHtbyZ.png",
+          "alt": "Gâteau à la banane"
+        },
+        "resume": {
+          "preparationTime": "15",
+          "cookingTime": "50",
+          "difficulty": "Très facile",
+          "cost": "Bon marché"
+        },
+        "ingredients": [
+          { "quantity": "3", "unit": "", "name": "bananes" },
+          { "quantity": "175", "unit": "g", "name": "de beurre" },
+          { "quantity": "3", "unit": "", "name": "œufs" },
+          { "quantity": "275", "unit": "g", "name": "de farine" },
+          { "quantity": "200", "unit": "g", "name": "de sucre" },
+          { "quantity": "1", "unit": " pincée", "name": "de sel" },
+          { "quantity": "½", "unit": " verre", "name": "de bière (optionnel)" },
+          { "quantity": "1", "unit": "", "name": "sachet de levure" }
+        ],
+        "tools": ["Saladier", "Moule", "Four", "Fouet"]
+      },
+      "etapes": [
+        {
+          "img": { "src": "https://imgur.com/tHjhpkW.png", "alt": "" },
+          "text": "Mélanger la farine, le sel et la levure"
+        },
+        {
+          "img": { "src": "https://imgur.com/TNyu89c.png", "alt": "" },
+          "text": "Faire chauffer le beurre et le sucre dans une casserole.\nQuand le sucre est fondu, l'ajouter à la farine."
+        },
+        {
+          "img": { "src": "https://imgur.com/t0E8j7e.png", "alt": "" },
+          "text": "Battre les œufs et les mélanger à la préparation."
+        },
+        {
+          "img": { "src": "https://imgur.com/xAPAUH8.png", "alt": "" },
+          "text": "Écraser les bananes et les mélanger à la préparation."
+        },
+        {
+          "img": { "src": "https://imgur.com/PaVe3UQ.png", "alt": "" },
+          "text": "Préchauffer le four à 180°C.\nVerser la pâte dans un moule beurré et fariné.\nMettre au four entre 50 minutes et 1 heure."
+        }
+      ]
+    }
   }
 ]

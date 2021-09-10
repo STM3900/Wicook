@@ -82,7 +82,8 @@ export default {
       "/pancakepommes",
       "/carbonara",
       "le_bon_gros_cake_au_citron",
-      "/turboflemme"
+      "/turboflemme",
+      "bananabread"
     ]
   },
 
