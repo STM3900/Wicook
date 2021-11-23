@@ -92,7 +92,7 @@ export default {
     getPerson() {
       const numbers = this.numberOfPerson.match(/\d+/g);
       let string = "personne";
-      if (numbers) {
+      if (!isNaN(this.numberOfPerson)) {
         for (let i = 0; i < numbers.length; i++) {
           if (numbers[i] > 1) {
             string = "personnes";

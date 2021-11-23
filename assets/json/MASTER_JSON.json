@@ -366,7 +366,7 @@
       "regime": "Végétarien",
       "author": "Jeanne",
       "source": "",
-      "numberOfPerson": "2 à 4",
+      "numberOfPerson": "2 à 4 personnes",
       "infoHeader": {
         "img": {
           "src": "https://www.picard.fr/dw/image/v2/AAHV_PRD/on/demandware.static/-/Sites-catalog-picard/default/dw72b9e3e8/produits/plats-cuisines/000000000000081714_E1.jpg?sw=672&sh=392",
@@ -475,7 +475,7 @@
       "author": "Agapouet",
       "regime": "",
       "source": "",
-      "numberOfPerson": "environ 4",
+      "numberOfPerson": "environ 4 personnes",
       "infoHeader": {
         "img": {
           "src": "http://www.foodforlove.fr/wp-content/uploads/2012/06/cake-aux-2-poires-et-roquefort.jpg",
@@ -761,7 +761,7 @@
       "regime": "Végétarien",
       "author": "Agapouet",
       "source": "",
-      "numberOfPerson": "2-4",
+      "numberOfPerson": "2-4 personnes",
       "infoHeader": {
         "img": {
           "src": "https://cdn.pixabay.com/photo/2020/02/12/09/34/pancakes-4842125_1280.jpg",
@@ -842,7 +842,7 @@
       "regime": "",
       "author": "Bubzy_h",
       "source": "",
-      "numberOfPerson": "1 grand ou 2 petits (3, si vous doublez les doses)",
+      "numberOfPerson": "1 grand ou 2 petits (3, si vous doublez les doses) personnes",
       "infoHeader": {
         "img": {
           "src": "https://cdn.discordapp.com/attachments/759178221928972298/872575356002009138/Screenshot_20210804-214218.png",
@@ -1101,6 +1101,79 @@
         {
           "img": { "src": "https://imgur.com/PaVe3UQ.png", "alt": "" },
           "text": "Préchauffer le four à 180°C.\nVerser la pâte dans un moule beurré et fariné.\nMettre au four entre 50 minutes et 1 heure."
+        }
+      ]
+    }
+  },
+  {
+    "url": "poulet_au_maroilles",
+    "recetteInfos": {
+      "nomDeRecette": "Poulet au maroilles",
+      "regime": "",
+      "author": "Kodo",
+      "source": "",
+      "numberOfPerson": "8 à 10 personnes (ou 6 ça dépends si vous êtes des gens normaux ou si Kirby est votre animal totem)",
+      "infoHeader": {
+        "img": {
+          "src": "https://cdn.discordapp.com/attachments/710842178691399759/912448017095872543/TKT.png",
+          "alt": "TKT Bro      C Bon/20"
+        },
+        "resume": {
+          "preparationTime": "5",
+          "cookingTime": "10",
+          "difficulty": "Très facile",
+          "cost": "Abordable"
+        },
+        "ingredients": [
+          { "quantity": "1", "unit": "kg", "name": "de poulet" },
+          { "quantity": "400", "unit": "g", "name": "de maroilles" },
+          { "quantity": "60", "unit": "mL", "name": "de crème" },
+          { "quantity": "", "unit": "", "name": "Sel & poivre" },
+          { "quantity": "", "unit": "", "name": "Epices curry" }
+        ],
+        "tools": [
+          "Un couteau",
+          "Une poêle à bord assez haut ou une marmite, un truc dans le genre ",
+          "Une spatule (en bois de préférences)"
+        ]
+      },
+      "etapes": [
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Couper grossièrement le poulet en morceaux de taille moyenne (c'est vous qui allez les manger donc faites des cubes mangeables ¯\\_(ツ)_/¯"
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Couper le maroilles en cube de la même taille environ et retirer la croûte"
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Préparer un bol avec la crème"
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Salé et poivré la viande et la mettre sur feu moyen"
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Remuer doucement et rajouter les épices curry"
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Continuer de remuer jusqu'à que la viande soit doré "
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Rajouter le maroilles et continuer à remuer"
+        },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Quand le fromage est fondu rajouter la crème et mélanger "
+        },
+        { "img": { "src": "", "alt": "" }, "text": "Gouter pour les épices " },
+        {
+          "img": { "src": "", "alt": "" },
+          "text": "Laisser a feu doux pendant 5 min"
         }
       ]
     }
